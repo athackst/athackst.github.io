@@ -1,7 +1,16 @@
 ---
 layout: default
 ---
-<div class="entry-content body-text">
+<div id="content-area">
+
+  <div id="table-of-contents">
+    <div id="table-of-contents-text">
+    <h4>Table of contents</h4>
+    {% toc %}
+    </div>
+  </div>
+
+  <div class="body-text entry-content">
 
   {{ content }}
 
@@ -28,4 +37,6 @@ layout: default
     {% endfor %}
   </ul>
   {% endif %}
+  </div>
 </div>
+
