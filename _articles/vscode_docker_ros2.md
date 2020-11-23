@@ -5,6 +5,7 @@ category: Robotics
 series: ROS
 tags: [vscode, docker, ros2]
 summary: How to set up VSCode to develop with ROS2
+redirect_from: /articles/vscode_docker_ros2.html
 ---
 
 I started out playing with ROS2 by using a docker container.  It was a fast and easy way for me to try out ROS2.  As an avid user of ROS, I naturally wanted to keep up with the new changes being made.  However, it can be difficult to set up, especially for new users.  This guide is intended to be used by people that are familiar with coding and software development, but maybe not ROS.
@@ -18,7 +19,7 @@ ROS2 is the next generation of software libraries for robotics development.  Eve
 
 ## VSCode and Docker
 
-First, I'm going to assume you already have [vscode](https://code.visualstudio.com/) and [docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) installed.  If not, check out my installation instructions [here](/articles/docker_development.html).
+First, I'm going to assume you already have [vscode](https://code.visualstudio.com/) and [docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) installed.  If not, check out my installation instructions [here]({% link _articles/docker_development.md %}).
 
 Ok, so now that you have Docker and VSCode installed, let's add some [ros2](https://index.ros.org/doc/ros2/)!
 

@@ -4,7 +4,8 @@ title: VSCode Tasks Problem Matchers
 category: Software Development
 tags: [vscode]
 image: /assets/img/vscode_run_task.gif
-summary: VSCode tasks are a powerful tool.  This is how i use them.
+summary: Use problem matchers to review output of tasks.
+redirect_from: /articles/vscode_tasks_problemmatcher.html
 ---
 
 If you use VSCode tasks, you'll probably be familiar with the warning that's reported in the command pallette if you haven't specified a "problem matcher" for your task.

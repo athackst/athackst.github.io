@@ -5,6 +5,7 @@ category: Robotics
 tags: [ros, ros2]
 series: ROS
 summary: Bridging ROS and ROS2 is harder than you would think. Here's how I did it.
+redirect_from: /articles/bridging_ros_ros2.html
 ---
 
 Running the `ros1_bridge` in a custom environment is tricky, and required me to make a patch to complete.  Here's what I learned:

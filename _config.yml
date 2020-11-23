@@ -1,7 +1,8 @@
 github: [metadata]
+permalink: pretty
 
 url: https://www.allisonthackston.com
-meta_url: http://www.allisonthackston.com
+meta_url: https://www.allisonthackston.com
 title: Allison Thackston
 author: Allison Thackston
 twitter_username: althack
@@ -25,7 +26,8 @@ plugins:
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-seo-tag
   - github-pages
-  
+  - jekyll-redirect-from # Set up custom redirects
+
 # Exclude these files from your production _site
 exclude:
   - Gemfile
@@ -34,13 +36,16 @@ exclude:
   - README.md
   - CNAME
 
+whitelist: 
+  - jekyll-redirect-from
+
 collections:
   articles:
     output: true
+    permalink: /:collection/:name:output_ext
 
 defaults:
-  - 
-    scope: 
+  - scope:
       path: ""
       type: "articles"
     values:

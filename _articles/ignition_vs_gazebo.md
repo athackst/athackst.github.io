@@ -6,6 +6,7 @@ series: Simulation
 tags: [ignition, gazebo, simulation, ros]
 image: /assets/img/gazebo_shadows.png
 summary: Should you make the switch to Ignition?  Find out how it compares to Gazebo!
+redirect_from: /articles/ignition_vs_gazebo.html
 ---
 
 Since Gazebo 11 will be the [last major version](http://gazebosim.org/blog/gazebo11) I thought I'd test the replacement [Ignition](https://ignitionrobotics.org/home).  There's a handy [comparison chart](https://ignitionrobotics.org/docs/citadel/comparison) with feature comparisons between the two programs.  

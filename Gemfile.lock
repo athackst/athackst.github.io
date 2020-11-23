@@ -276,6 +276,7 @@ DEPENDENCIES
   html-proofer
   jekyll
   jekyll-feed
+  jekyll-redirect-from
   jekyll-seo-tag
   jekyll-sitemap
   kramdown (>= 2.3.0)

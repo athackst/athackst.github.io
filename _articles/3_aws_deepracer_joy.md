@@ -6,6 +6,7 @@ series: DeepRacer
 tags: deepracer
 image: /assets/img/deepracer_joy.gif
 summary: How to set up ROS to control the DeepRacer with a gamepad.
+redirect_from: /articles/3_aws_deepracer_joy.html
 ---
 
 The first thing I wanted to do when I got my DeepRacer was to drive it around.  It comes with a web interface where you can run it in "manual" mode, but I wanted to use a gamepad controller. (By default the web interface is only controllable via mouse.)
@@ -30,9 +31,9 @@ I've also done all the work to get you up and running, so long as you have
 
 * [vscode](https://code.visualstudio.com/)
 * [docker](https://www.docker.com/products/container-runtime)
-* [set up the DeepRacer for remote connection](/articles/2_aws_deepracer_software.html#connecting-to-another-computer)
+* [set up the DeepRacer for remote connection]({% link _articles/2_aws_deepracer_software.md %}#connecting-to-another-computer)
 
-you should be able to use my [deepracer_ws](https://github.com/athackst/deepracer_ws) as an IDE for the DeepRacer.  For more information on how I set up my workspaces, check my article on [docker development](/articles/docker_development.html).
+you should be able to use my [deepracer_ws](https://github.com/athackst/deepracer_ws) as an IDE for the DeepRacer.  For more information on how I set up my workspaces, check my article on [docker development]({% link _articles/docker_development.md %}).
 
 ```bash
 git clone --branch articles/deepracer_joy --recurse-submodules https://github.com/athackst/deepracer_ws.git
@@ -62,7 +63,7 @@ You'll also want to share the host network since ROS communicates over ephemeral
 
 ### VSCode Tasks
 
-I've added a couple of tasks you can use to help use the workspace.  Tasks are how I [super charge my development](/articles/vscode_tasks.html).
+I've added a couple of tasks you can use to help use the workspace.  Tasks are how I [super charge my development]({% link _articles/vscode_tasks.md %}).
 
 1. build
 
@@ -199,6 +200,6 @@ The first thing you'll want to do to set up your gamepad is to verify your conne
 
     ![deepracer joystick control](/assets/img/deepracer_joy.gif)
 
-> Note: If you want to run this onboard, checkout the next post on [running the deepracer_joy package onboard](/articles/4_aws_deepracer_joy_onboard.html)
+> Note: If you want to run this onboard, checkout the next post on [running the deepracer_joy package onboard]({% link _articles/4_aws_deepracer_joy_onboard.md %})
 >
 > This is only tested as working with Ubuntu 18.04 as the host.  In theory, this should work with other flavors of Linux based systems as well.  This has not been tested on MacOsx or Windows systems and they may require additional settings.

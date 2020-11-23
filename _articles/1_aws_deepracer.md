@@ -6,6 +6,7 @@ series: DeepRacer
 tags: deepracer
 image: /assets/img/IMG_5239.jpg
 summary: How it arrived and a look at the hardware.
+redirect_from: /articles/1_aws_deepracer.html
 ---
 
 ![aws deep racer](/assets/img/IMG_5239.jpg)
@@ -50,7 +51,7 @@ You have to charge the main chassis separately from the compute.  You'll also ne
 
 ## The software
 
-It comes pre-loaded with ROS Kinetic (which is a little dated at this point).  I'm hoping it will be fairly easy to port it to a different version of ROS or use a docker container for development since that's my preferred mode of development anyway.  Check out my tutorial on how I set up [vscode for container-based development](/articles/docker_development.html).
+It comes pre-loaded with ROS Kinetic (which is a little dated at this point).  I'm hoping it will be fairly easy to port it to a different version of ROS or use a docker container for development since that's my preferred mode of development anyway.  Check out my tutorial on how I set up [vscode for container-based development]({% link _articles/docker_development.md %}).
 
 I'll be sharing my development notes and journey with the deep racer here, so stay tuned!
 

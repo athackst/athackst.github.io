@@ -3,6 +3,7 @@ layout: text_entry
 title: Creating a Culture of Documentation
 category: Leadership
 tags: [docker, documentation]
+redirect_from: /articles/culture_of_documentation.html
 ---
 Documentation is one of those things that often gets overlooked.  After all, it's not strictly required for your code to run!  But there is a great amount of value to be gained by creating a culture of documentation.  I'm not talking about the "low quality" documentation that insists on simply re-writing in prose the name of the variable.
 

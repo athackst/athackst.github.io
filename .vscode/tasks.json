@@ -30,9 +30,15 @@
         {
             "label": "t: test",
             "type": "shell",
-            "command": ".github/htmlproofer.sh",
+            "command": "ruby .github/htmlproofer.rb",
             "problemMatcher": [],
             "dependsOn": ["b: build"]
+        },
+        {
+            "label": "c: clean",
+            "type": "shell",
+            "command": "rm -fr _site/*",
+            "problemMatcher": [],
         }
     ]
 }

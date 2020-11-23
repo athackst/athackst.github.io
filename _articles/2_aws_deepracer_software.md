@@ -6,6 +6,7 @@ series: DeepRacer
 tags: deepracer
 image: /assets/img/IMG_5257.jpg
 summary: How to view the ROS API on the Deepracer and connect to it from another computer.
+redirect_from: /articles/2_aws_deepracer_software.md
 ---
 
 So you have a deep racer and you want to learn more about the software that's on it, read on!
