@@ -18,21 +18,16 @@
 	"postCreateCommand": "bundle install",
 	// Add the IDs of extensions you want installed when the container is created in the array below.
 	"extensions": [
-		// yaml for data files
 		"redhat.vscode-yaml",
-		// liquid templating syntax highlighting
 		"sissel.shopify-liquid",
-		// jekyll
 		"ginfuru.ginfuru-vscode-jekyll-syntax",
 		"ginfuru.vscode-jekyll-snippets",
-		// markdown
 		"yzhang.markdown-all-in-one",
 		"davidanson.vscode-markdownlint",
-		// html/css
 		"ecmel.vscode-html-css",
 		"aeschli.vscode-css-formatter",
-		// editing
 		"znck.grammarly",
-		"ms-vscode.wordcount"
+		"ms-vscode.wordcount",
+		"donjayamanne.githistory"
 	]
 }

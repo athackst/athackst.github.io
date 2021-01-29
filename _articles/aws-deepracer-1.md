@@ -6,7 +6,9 @@ series: DeepRacer
 tags: deepracer
 image: /assets/img/IMG_5239.jpg
 summary: How it arrived and a look at the hardware.
-redirect_from: /articles/1_aws_deepracer.html
+redirect_from: 
+    - /articles/1_aws_deepracer.html
+    - /articles/1-aws-deepracer.html
 ---
 
 ![aws deep racer](/assets/img/IMG_5239.jpg)

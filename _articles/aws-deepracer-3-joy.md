@@ -6,7 +6,9 @@ series: DeepRacer
 tags: deepracer
 image: /assets/img/deepracer_joy.gif
 summary: How to set up ROS to control the DeepRacer with a gamepad.
-redirect_from: /articles/3_aws_deepracer_joy.html
+redirect_from: 
+   - /articles/3_aws_deepracer_joy.html
+   - /articles/3-aws-deepracer-joy.html
 ---
 
 The first thing I wanted to do when I got my DeepRacer was to drive it around.  It comes with a web interface where you can run it in "manual" mode, but I wanted to use a gamepad controller. (By default the web interface is only controllable via mouse.)
@@ -31,7 +33,7 @@ I've also done all the work to get you up and running, so long as you have
 
 * [vscode](https://code.visualstudio.com/)
 * [docker](https://www.docker.com/products/container-runtime)
-* [set up the DeepRacer for remote connection]({% link _articles/2_aws_deepracer_software.md %}#connecting-to-another-computer)
+* [set up the DeepRacer for remote connection]({% link _articles/aws-deepracer-2-software.md %}#connecting-to-another-computer)
 
 you should be able to use my [deepracer_ws](https://github.com/athackst/deepracer_ws) as an IDE for the DeepRacer.  For more information on how I set up my workspaces, check my article on [docker development]({% link _articles/docker_development.md %}).
 
@@ -99,7 +101,7 @@ I've added a couple of tasks you can use to help use the workspace.  Tasks are h
 
 ## DeepRacer ROS messages
 
-The first thing you need to do to interface with a ROS topic is be able to link against the headers and/or python bindings. I copied all of the `.msg` and `.srv` files from my DeepRacer into aws_deepracer_msgs, re-creating each package so that they can be compiled and linked against locally.  
+The first thing you need to do to interface with a ROS topic is link against the headers or include the python modules.  I created a stand-alone package, `aws_deepracer_msgs` with all of the `.msg` and `.srv` files from my DeepRacer.  Using this package, you can now include the DeepRacer messages.
 
 There are six packages with custom messages or services:
 
@@ -200,6 +202,6 @@ The first thing you'll want to do to set up your gamepad is to verify your conne
 
     ![deepracer joystick control](/assets/img/deepracer_joy.gif)
 
-> Note: If you want to run this onboard, checkout the next post on [running the deepracer_joy package onboard]({% link _articles/4_aws_deepracer_joy_onboard.md %})
+> Note: If you want to run this onboard, checkout the next post on [running the deepracer_joy package onboard]({% link _articles/aws-deepracer-4-joy-onboard.md %})
 >
 > This is only tested as working with Ubuntu 18.04 as the host.  In theory, this should work with other flavors of Linux based systems as well.  This has not been tested on MacOsx or Windows systems and they may require additional settings.

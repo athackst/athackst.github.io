@@ -6,7 +6,9 @@ series: DeepRacer
 tags: [deepracer, ros2]
 image: /assets/img/IMG_5256.jpg
 summary: Using ROS2 with the DeepRacer means one thing; setting up a working ros bridge.
-redirect_from: /articles/5_aws_deepracer_ros1_bridge.html
+redirect_from: 
+   - /articles/5_aws_deepracer_ros1_bridge.html
+   - /articles/5-aws-deepracer-ros1-bridge.html
 ---
 
 ## Interfacing with ROS2
@@ -23,7 +25,7 @@ So what does it take to use ROS2 with the DeepRacer?
 
 The DeepRacer currently runs [ROS Kinetic](http://wiki.ros.org/kinetic) with a stack of proprietary software developed by AWS.  So, unlike other porting efforts, the base software stack can't be changed.  However, we can build and run ROS2 applications on top of ROS 1, so long as we bridge the communication between those two APIs.
 
-You can bridge these two networks with a package called [ros1_bridge](https://github.com/ros2/ros1_bridge). At the time of this writing, the [ros1_bridge](https://github.com/ros2/ros1_bridge) does not support dynamic binding.  We must, therefore, compile the ros1_bridge with all of the message types we need for the DeepRacer. Since the DeepRacer has [quite a few]({% link _articles/3_aws_deepracer_joy.md %}#deepracer-ros-messages) custom messages, we will need to have those messages compiled in both ROS and ROS2 for the ros1_bridge to be able to bind to them.
+You can bridge these two networks with a package called [ros1_bridge](https://github.com/ros2/ros1_bridge). At the time of this writing, the [ros1_bridge](https://github.com/ros2/ros1_bridge) does not support dynamic binding.  We must, therefore, compile the ros1_bridge with all of the message types we need for the DeepRacer. Since the DeepRacer has [quite a few]({% link _articles/aws-deepracer-3-joy.md %}#deepracer-ros-messages) custom messages, we will need to have those messages compiled in both ROS and ROS2 for the ros1_bridge to be able to bind to them.
 
 The first thing you'll realize when you try to build the ros1_bridge is that it requires a very specific environment.  This makes it tricky to set up correctly, especially for novices, or those just not as familiar with ROS and ROS2.  I've taken the liberty of providing this setup inside of a [docker container](https://github.com/athackst/deepracer_ws/tree/articles/deepracer_ros2_bridge) for your convenience.
 
