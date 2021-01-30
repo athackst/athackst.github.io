@@ -51,13 +51,13 @@ Edit the `/etc/docker/daemon.json` to have the following line
 { "insecure-registries":["your_hostname.local:5000"] }
 ```
 
-Replace 'your_hostname' with the hostname of the computer you set up as the local docker registry, or its IP address.
+Replace 'your_hostname' with the hostname of the computer you set up as the local docker registry or its IP address.
 
-> Note: `your_hostname.local` uses avahi to resolve the appropriate IP address.  This is normally preferred since routers typically dynamically assign IP addresses and this lets you reference a specific device without having to know what the IP address is, and without having to updated it.  If avahi doesn't work on your network for some reason, you can replace `your_hostname.local` with an IP address.
+> :pencil: **Note** `your_hostname.local` uses avahi to resolve the appropriate IP address.  This is normally preferred since routers typically dynamically assign IP addresses and this lets you reference a specific device without having to know what the IP address is, and without having to updated it.  If avahi doesn't work on your network for some reason, you can replace `your_hostname.local` with an IP address.
 
 ## Pushing to the Local Docker Registry
 
-Pushing to a local Docker Registry is as easy as tagging an image with the registry name (the host name or IP of your registry + port number) and pushing.
+Pushing to a local Docker Registry is as easy as tagging an image with the registry name (the hostname or IP of your registry + port number) and pushing.
 
 For example:
 

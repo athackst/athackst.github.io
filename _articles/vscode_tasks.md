@@ -25,8 +25,7 @@ This may seem like overkill to you, but there are some serious advantages to usi
 3. Chained commands.  You can also chain/group commands so that they will all be executed in their own (separate) terminals.
    If you've ever developed in ROS, you'll know that having many terminals, each with their own rosnode or roslaunch on it is very common practice.  You wind up with a lot of terminals that becomes hard to manage.
 
-| Bonus: if you re-run a task, it will only restart the tasks that have stopped, letting you restart processes that have died and let long-running processes continue to run undisturbed. |
-| --- |
+> :boom: **Bonus** if you re-run a task, it will only restart the tasks that have stopped, letting you restart processes that have died and let long-running processes continue to run undisturbed.
 
 So yeah, almost _all_ of the commands I would ever use.
 

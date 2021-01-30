@@ -8,8 +8,8 @@ group :jekyll_plugins do
   gem 'jekyll-seo-tag'
   gem 'github-pages'
   gem 'jekyll-redirect-from'
+  gem 'jemoji'
 end
 
 gem 'html-proofer'
 
-gem "kramdown", ">= 2.3.0"

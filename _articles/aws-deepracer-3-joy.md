@@ -43,7 +43,7 @@ git clone --branch articles/deepracer_joy --recurse-submodules https://github.co
 
 This will give you my version of my workspace and code that I used for this article.  In it contains a docker container and my VSCode settings.
 
-> Note: I ran this on my laptop and connected to the DeepRacer through my home network.
+> :pencil: **Note** I ran this on my laptop and connected to the DeepRacer through my home network.
 
 ### Docker container
 
@@ -175,7 +175,7 @@ The first thing you'll want to do to set up your gamepad is to verify your conne
         buttons: [4]
     ```
 
-    > Note: in order to control the vehicle you have to both call the `/enable_state` service to set `isActive` to true _and_ provide a command input on the `manual_drive` topic.
+    > :pencil: **Note** in order to control the vehicle you have to both call the `/enable_state` service to set `isActive` to true _and_ provide a command input on the `manual_drive` topic.
 
     Unfortunately, the joy_teleop package only has hooks for "buttons" which acts like a "button_press" event and doesn't have a way to react to "button_release" events.  It would be better if all deadman functionality used the `/enable_state` service (as I'm sure was intended) instead of listing it both as a service call and in deadman_buttons.
 
@@ -202,6 +202,6 @@ The first thing you'll want to do to set up your gamepad is to verify your conne
 
     ![deepracer joystick control](/assets/img/deepracer_joy.gif)
 
-> Note: If you want to run this onboard, checkout the next post on [running the deepracer_joy package onboard]({% link _articles/aws-deepracer-4-joy-onboard.md %})
+> :pencil: **Note** If you want to run this onboard, checkout the next post on [running the deepracer_joy package onboard]({% link _articles/aws-deepracer-4-joy-onboard.md %})
 >
 > This is only tested as working with Ubuntu 18.04 as the host.  In theory, this should work with other flavors of Linux based systems as well.  This has not been tested on MacOsx or Windows systems and they may require additional settings.

@@ -134,7 +134,7 @@ On the DeepRacer make or edit the `/etc/docker/daemon.json` to have the followin
 
 Replace 'your_hostname' with the hostname of the computer you set up as the local docker registry.
 
-> Note: `your_hostname.local` uses avahi to resolve the appropriate IP address.  This is normally preferred since routers typically dynamically assign IP addresses and this lets you reference a specific device without having to know what the IP address is, and without having to updated it.  If avahi doesn't work on your network for some reason, you can replace `your_hostname.local` with an IP address.
+> :pencil: **Note** `your_hostname.local` uses avahi to resolve the appropriate IP address.  This is normally preferred since routers typically dynamically assign IP addresses and this lets you reference a specific device without having to know what the IP address is, and without having to updated it.  If avahi doesn't work on your network for some reason, you can replace `your_hostname.local` with an IP address.
 
 Now you can pull the docker image!
 
@@ -177,7 +177,7 @@ The steps for launching the gamepad controller on the DeepRacer are similar to t
 
     You should see `deepracer_joy` launch successfully
 
-    > Note: Mine always says that it can't connect to the device, but it is actually successful at connecting
+    > :pencil: **Note** Mine always says that it can't connect to the device, but it is actually successful at connecting
     >
     > ```bash
     > [ERROR] [1577818476.385114334]: Couldn't open joystick force feedback!

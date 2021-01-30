@@ -80,6 +80,12 @@ img[src*='#center'] {
   margin: auto;
 }
 
+img.emoji {
+  display: inline;
+  margin: auto;
+  width: auto;
+}
+
 a {
   color: #38761d;
   text-decoration: none;
@@ -132,7 +138,6 @@ th {
   text-transform: uppercase; 
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
   background-color: #4CAF50;
   color: white;
 }

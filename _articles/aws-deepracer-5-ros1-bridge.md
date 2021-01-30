@@ -81,7 +81,7 @@ I found the ROS2 is much more strict when it comes to naming conventions than RO
 
 This necessitated the creation of rules files for all of the messages.  A `mapping_rules` file tells the `ros1_bridge` how to map from ROS messages to ROS2 messages.
 
-> Note: You will need to use [my fork of the ros1_bridge](https://github.com/athackst/ros1_bridge) at the time of this writing because I had to modify the upstream repository to properly handle services.
+> :pencil: **Note** You will need to use [my fork of the ros1_bridge](https://github.com/athackst/ros1_bridge) at the time of this writing because I had to modify the upstream repository to properly handle services.
 
 Since I've already ported the [aws_deepracer_msgs](https://github.com/athackst/aws_deepracer_msgs/tree/eloquent) to [ROS2 Eloquent](https://index.ros.org/doc/ros2/Releases/Release-Eloquent-Elusor/), we just need to compile these in the ROS Eloquent environment.
 

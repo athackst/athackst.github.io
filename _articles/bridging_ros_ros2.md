@@ -301,7 +301,7 @@ RUN mkdir -p src && cd src \
 
 I'm using my development melodic image, which includes just the basic ros packages as well as required build tools.  Be sure to install any dependencies your packages require.  You'll need to repeat these dependencies in the ros1_bridge image, so you might want to install them by using a script.
 
-> Note: I chose melodic so that the base operating system would match my desired destination ros2 version of eloquent.
+> :pencil: **Note** I chose melodic so that the base operating system would match my desired destination ros2 version of eloquent.
 
 I've chosen to install my packages in the `/opt/ros/melodic` directory.  This makes it easier to copy and source in the resulting `ros1_bridge` image.  If you choose to put the ros install directory somewhere else, you'll need to add additional environment variables for that workspace in the `ros1_bridge` image.
 

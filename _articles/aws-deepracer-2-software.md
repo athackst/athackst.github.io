@@ -44,7 +44,7 @@ ssh deepracer@$DEEPRACER_IP
 
 When it asks you for a password, enter the one you created on the webpage.
 
-> Note: this password is different from the default password to log into the DeepRacer console webpage.
+> :pencil: **Note** this password is different from the default password to log into the DeepRacer console webpage.
 
 Now you can start exploring the software that's running
 
