@@ -60,6 +60,7 @@
         "libxml",
         "libxslt",
         "markdownlint",
+        "md",
         "mjpeg",
         "mkdir",
         "msgs",
