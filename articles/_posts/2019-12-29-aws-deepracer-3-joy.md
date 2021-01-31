@@ -33,9 +33,9 @@ I've also done all the work to get you up and running, so long as you have
 
 * [vscode](https://code.visualstudio.com/)
 * [docker](https://www.docker.com/products/container-runtime)
-* [set up the DeepRacer for remote connection]({% link _articles/aws-deepracer-2-software.md %}#connecting-to-another-computer)
+* [set up the DeepRacer for remote connection]({% post_url articles/2019-12-29-aws-deepracer-2-software %}#connecting-to-another-computer)
 
-you should be able to use my [deepracer_ws](https://github.com/athackst/deepracer_ws) as an IDE for the DeepRacer.  For more information on how I set up my workspaces, check my article on [docker development]({% link _articles/docker_development.md %}).
+you should be able to use my [deepracer_ws](https://github.com/athackst/deepracer_ws) as an IDE for the DeepRacer.  For more information on how I set up my workspaces, check my article on [docker development]({% post_url articles/2019-12-29-docker-development %}).
 
 ```bash
 git clone --branch articles/deepracer_joy --recurse-submodules https://github.com/athackst/deepracer_ws.git
@@ -65,7 +65,7 @@ You'll also want to share the host network since ROS communicates over ephemeral
 
 ### VSCode Tasks
 
-I've added a couple of tasks you can use to help use the workspace.  Tasks are how I [super charge my development]({% link _articles/vscode_tasks.md %}).
+I've added a couple of tasks you can use to help use the workspace.  Tasks are how I [super charge my development]({% post_url articles/2019-12-29-vscode-tasks %}).
 
 1. build
 
@@ -202,6 +202,6 @@ The first thing you'll want to do to set up your gamepad is to verify your conne
 
     ![deepracer joystick control](/assets/img/deepracer_joy.gif)
 
-> :pencil: **Note** If you want to run this onboard, checkout the next post on [running the deepracer_joy package onboard]({% link _articles/aws-deepracer-4-joy-onboard.md %})
+> :pencil: **Note** If you want to run this onboard, checkout the next post on [running the deepracer_joy package onboard]({% post_url articles/2020-1-25-aws-deepracer-4-joy-onboard %})
 >
 > This is only tested as working with Ubuntu 18.04 as the host.  In theory, this should work with other flavors of Linux based systems as well.  This has not been tested on MacOsx or Windows systems and they may require additional settings.

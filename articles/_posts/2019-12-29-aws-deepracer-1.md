@@ -53,7 +53,7 @@ You have to charge the main chassis separately from the compute.  You'll also ne
 
 ## The software
 
-It comes pre-loaded with ROS Kinetic (which is a little dated at this point).  I'm hoping it will be fairly easy to port it to a different version of ROS or use a docker container for development since that's my preferred mode of development anyway.  Check out my tutorial on how I set up [vscode for container-based development]({% link _articles/docker_development.md %}).
+It comes pre-loaded with ROS Kinetic (which is a little dated at this point).  I'm hoping it will be fairly easy to port it to a different version of ROS or use a docker container for development since that's my preferred mode of development anyway.  Check out my tutorial on how I set up [vscode for container-based development]({% post_url articles/2019-12-29-docker-development %}).
 
 I'll be sharing my development notes and journey with the deep racer here, so stay tuned!
 

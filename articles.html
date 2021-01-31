@@ -4,7 +4,8 @@ title: Thoughts
 recirect_from: /thoughts.html
 ---
 <div class="entry-content">
-  {% assign groups = site.articles | group_by: "category"  %}
+  {% assign articles = site.posts | where_exp: "post", "post.categories contains 'articles'" %}
+  {% assign groups = articles | group_by: "category" %}
   {% for group in groups %}
   <h1>{{ group.name }}</h1>
   {% assign series = group.items | group_by: "series" | sort: "name" %}

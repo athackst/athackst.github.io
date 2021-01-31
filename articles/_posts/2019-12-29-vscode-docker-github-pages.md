@@ -7,7 +7,7 @@ summary: Using Jekyll to set up Github pages is easy in a docker.
 redirect_from: /articles/vscode_docker_github_pages.html
 ---
 
-As a casual user of Github Pages, I find that I continually have to remember how I set up the development environment so I can edit my website.  There's nothing worse to losing hours to configuration nightmares on coding that is supposed to be for fun.  And since I use [docker and vscode]({% link _articles/docker_development.md %}), it was a pretty easy decision to try to put my website workspace into a container.
+As a casual user of Github Pages, I find that I continually have to remember how I set up the development environment so I can edit my website.  There's nothing worse to losing hours to configuration nightmares on coding that is supposed to be for fun.  And since I use [docker and vscode]({% post_url articles/2019-12-29-docker-development %}), it was a pretty easy decision to try to put my website workspace into a container.
 
 ## Make a docker image
 

@@ -25,7 +25,7 @@ So what does it take to use ROS2 with the DeepRacer?
 
 The DeepRacer currently runs [ROS Kinetic](http://wiki.ros.org/kinetic) with a stack of proprietary software developed by AWS.  So, unlike other porting efforts, the base software stack can't be changed.  However, we can build and run ROS2 applications on top of ROS 1, so long as we bridge the communication between those two APIs.
 
-You can bridge these two networks with a package called [ros1_bridge](https://github.com/ros2/ros1_bridge). At the time of this writing, the [ros1_bridge](https://github.com/ros2/ros1_bridge) does not support dynamic binding.  We must, therefore, compile the ros1_bridge with all of the message types we need for the DeepRacer. Since the DeepRacer has [quite a few]({% link _articles/aws-deepracer-3-joy.md %}#deepracer-ros-messages) custom messages, we will need to have those messages compiled in both ROS and ROS2 for the ros1_bridge to be able to bind to them.
+You can bridge these two networks with a package called [ros1_bridge](https://github.com/ros2/ros1_bridge). At the time of this writing, the [ros1_bridge](https://github.com/ros2/ros1_bridge) does not support dynamic binding.  We must, therefore, compile the ros1_bridge with all of the message types we need for the DeepRacer. Since the DeepRacer has [quite a few]({% post_url articles/2019-12-29-aws-deepracer-3-joy %}#deepracer-ros-messages) custom messages, we will need to have those messages compiled in both ROS and ROS2 for the ros1_bridge to be able to bind to them.
 
 The first thing you'll realize when you try to build the ros1_bridge is that it requires a very specific environment.  This makes it tricky to set up correctly, especially for novices, or those just not as familiar with ROS and ROS2.  I've taken the liberty of providing this setup inside of a [docker container](https://github.com/athackst/deepracer_ws/tree/articles/deepracer_ros2_bridge) for your convenience.
 
@@ -75,7 +75,7 @@ Let's delve a little into this command:
 
 Next, you're going to want to create the ROS2 version of all the messages.  I've already done this for the DeepRacer in the [eloquent branch](https://github.com/athackst/aws_deepracer_msgs/tree/eloquent) of the [aws_deepracer_msgs](https://github.com/athackst/aws_deepracer_msgs) repo.
 
-Check out my article on [bridging ROS and ROS2]({% link _articles/bridging_ros_ros2.md %}) for more information on how I ported the messages.
+Check out my article on [bridging ROS and ROS2]({% post_url articles/2020-3-14-bridging-ros-ros2 %}) for more information on how I ported the messages.
 
 I found the ROS2 is much more strict when it comes to naming conventions than ROS.  This created some differences between the names of elements in the ROS message verses the names of elements in the ROS2 message.  Notably, ROS2 enforces that all elements within the message adhere to the `underscore_style`.
 
@@ -326,7 +326,7 @@ The final step is, of course, to run the `ros1_bridge` dockerfile on the DeepRac
 
 I made a docker image that will go through all of the steps outlined above inside of a multi-stage docker.  
 
-Simply build it, and tag it with your local docker registry name.  See [how to set up a local docker registry]({% link _articles/local_docker_registry.md %}) if you need help with that step.
+Simply build it, and tag it with your local docker registry name.  See [how to set up a local docker registry]({% post_url articles/2020-5-27-local-docker-registry %}) if you need help with that step.
 
 ```bash
 cd deepracer_ws/ros1_bridge_ws

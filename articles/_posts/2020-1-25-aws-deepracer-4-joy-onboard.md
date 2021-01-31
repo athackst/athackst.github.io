@@ -11,7 +11,7 @@ redirect_from:
     - /articles/4-aws-deepracer-joy-onboard.html
 ---
 
-After I hooked up a [gamepad through ROS]({% link _articles/aws-deepracer-3-joy.md %}) to the DeepRacer, the next step was to get it loaded directly onto the DeepRacer.  Because what good is a remote control for an RC car if you need to set up a laptop to use it?
+After I hooked up a [gamepad through ROS]({% post_url articles/2019-12-29-aws-deepracer-3-joy %}) to the DeepRacer, the next step was to get it loaded directly onto the DeepRacer.  Because what good is a remote control for an RC car if you need to set up a laptop to use it?
 
 There are two main ways in which the gamepad controller could be loaded into the DeepRacer.  One way is to simply copy over the installation directory on to the DeepRacer, source it, and launch it.  The other is to load a docker container.
 
@@ -144,7 +144,7 @@ docker pull your_hostname.local:5000/deepracer_joy
 
 ## Setup your gamepad
 
-The steps for launching the gamepad controller on the DeepRacer are similar to the [previous article]({% link _articles/aws-deepracer-3-joy.md %}).
+The steps for launching the gamepad controller on the DeepRacer are similar to the [previous article]({% post_url articles/2019-12-29-aws-deepracer-3-joy %}).
 
 1. Find the device name of your joystick.
 

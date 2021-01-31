@@ -8,7 +8,7 @@ summary: VSCode tasks are a powerful tool.  This is how i use them.
 redirect_from: /articles/vscode_tasks.html
 ---
 
-In my previous articles I showed you how I set up [github pages]({% link _articles/vscode_docker_github_pages.md %}) and [ros2]( {% link _articles/vscode_docker_ros2.md %}) with vscode.
+In my previous articles I showed you how I set up [github pages]({% post_url articles/2019-12-29-vscode-docker-github-pages %}) and [ros2]( {% post_url articles/2019-12-29-vscode-docker-ros2 %}) with vscode.
 
 Tasks are my super-weapon when it comes to productivity.  I make nearly every command I would type into a terminal a task.
 

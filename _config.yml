@@ -30,15 +30,11 @@ exclude:
 whitelist: 
   - jekyll-redirect-from
 
-collections:
-  articles:
-    output: true
-    permalink: /:collection/:name:output_ext
-
 defaults:
   - scope:
-      path: ""
-      type: "articles"
+      path: "articles"
+      type: "posts"
     values:
       layout: text_entry
+      permalink: /articles/:title:output_ext
       toc: true
