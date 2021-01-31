@@ -57,7 +57,7 @@ To connect the docker container to the DeepRacer and use a gamepad as input, you
 
 You'll need to run the container in "privileged" mode by setting the `--privileged` tag in the run arguments for the container.  This will allow you to access the gamepad.
 
-> Note for windows users:  the --privileged tag is not supported in docker for windows.  You will need to develop through a VM, or run directly on the DeepRacer to connect the gamepad for testing.
+> :pencil: **Note** Windows users:  the --privileged tag is not supported in docker for windows.  You will need to develop through a VM, or run directly on the DeepRacer to connect the gamepad for testing.
 
 #### Network
 

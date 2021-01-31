@@ -389,7 +389,7 @@ RUN mkdir -p src && cd src \
 
 ```
 
-> Note, I had to patch the ros1_bridge to correctly handle mapped services. [#241](https://github.com/ros2/ros1_bridge/pull/241)
+> :pencil: **Note** I had to patch the `ros1_bridge` package to correctly handle mapped services. [#241](https://github.com/ros2/ros1_bridge/pull/241)
 
 ### Run the ros1_bridge
 

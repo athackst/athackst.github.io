@@ -109,7 +109,7 @@ To model bounce in Gazebo you need to set 3 parameters in the SDF.
 2. `threshold`  The penetration threshold needed to apply restitution force
 3. `max_vel` The maximum velocity that the restitution force can cause.
 
-True infinite bounce is only achieved if the ground _also_ has the `restitution_coefficient` set to 1.  Note you can set the `max_vel` of the ground to 0 so it doesn't accrue any velocity.
+True infinite bounce is only achieved if the ground _also_ has the `restitution_coefficient` set to 1.  You can set the `max_vel` of the ground to 0 so it doesn't accrue any velocity.
 
 ## Joint Dynamics
 

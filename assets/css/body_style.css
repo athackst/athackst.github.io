@@ -71,12 +71,23 @@
   width: 300px;
 }
 
+.about h2 {
+  text-transform: lowercase;
+  color: #666666;
+}
+
 .skills {
   text-align: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.skills h4 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: #333333;
 }
 
 .skills-item {

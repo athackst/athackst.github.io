@@ -33,7 +33,7 @@ To interface with ROS instead of using the web console, you'll need to enable SS
 
 Go ahead and click "enable" and set up your SSH password.
 
-> Note that the default username is DeepRacer.
+> :pencil: **Note** The default username is DeepRacer.
 
 After you've enabled SSH, you can now log into your deep racer from the terminal.
 
@@ -44,7 +44,7 @@ ssh deepracer@$DEEPRACER_IP
 
 When it asks you for a password, enter the one you created on the webpage.
 
-> :pencil: **Note** this password is different from the default password to log into the DeepRacer console webpage.
+> :pencil: **Note** This password is different from the default password to log into the DeepRacer console webpage.
 
 Now you can start exploring the software that's running
 
@@ -231,7 +231,7 @@ But since ROS uses _ephemeral_ ports to connect nodes, you'll need to first disa
 deepracer@amss-hd4i:/opt/aws/deepracer$ sudo ufw disable
 ```
 
-> Note the password for `sudo` is the same as your SSH password
+> :pencil: **Note** The password for `sudo` is the same as your SSH password.
 
 Now on your computer, run my docker image with the following command:
 

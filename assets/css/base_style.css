@@ -1,58 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Open+Sans&family=Oswald&family=Roboto&display=swap');
+/* 
+font-family: 'Courier Prime', monospace; # for code
+font-family: 'Open Sans', sans-serif; # for text
+font-family: 'Oswald', sans-serif; # for nav bar
+font-family: 'Roboto', sans-serif; # for titles
+*/
+
 body {
   margin: auto;
 }
 
 h1 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: xxx-large;
-  color: #7a7a7a;
-  text-decoration: none;
-  letter-spacing: 0px;
+  color: #666666;
   line-height: 1.25em;
-  text-transform: uppercase;
   height: auto;
 }
 
 h2 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: xx-large;
-  color: #8a8a8a;
-  text-decoration: none;
-  text-transform: lowercase;
-  letter-spacing: 0px;
+  color: #666666;
   line-height: 1.0em;
   height: auto;
 }
 
 h3 {
-  font-family: 'Raleway';
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: x-large;
   color: #7a7a7a;
-  text-decoration: none;
-  letter-spacing: 1px;
   line-height: 1em;
-  text-transform: none;
 }
 
 h4 {
-  font-family: 'Oswald';
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   font-size: large;
-  color: #333333;
-  text-decoration: none;
-  letter-spacing: 1px;
+  color: #7a7a7a;
   line-height: 1em;
-  text-transform: uppercase;
 }
 
 p {
-  font-family: 'Actor';
+  font-family: 'Open Sans', sans-serif;
   font-size: medium;
-  color: #797979;
+  color: #7a7a7a;
   line-height: 1.5em;
-  text-transform: none;
   margin: auto;
   padding-bottom: 10px;
 }
@@ -97,7 +93,7 @@ a:hover {
 }
 
 ol {
-  font-family: 'Actor';
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #797979;
   line-height: 1.5em;
@@ -108,7 +104,7 @@ ol {
 
 ul {
   padding-left: 5vw;
-  font-family: 'Actor';
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #797979;
   line-height: 1.5em;
@@ -130,7 +126,7 @@ td th {
 }
 
 th {
-  font-family: 'Oswald';
+  font-family: 'Roboto', sans-serif;
   font-size: large;
   color: #333333;
   letter-spacing: 1px;
@@ -146,7 +142,7 @@ tr:nth-child(even){background-color: #f2f2f2;}
 tr:hover {background-color: #ddd;}
 
 tr {
-  font-family: 'Actor';
+  font-family: 'Open Sans', sans-serif;
   font-size: medium;
   color: #797979;
   line-height: 1.5em;
@@ -195,4 +191,8 @@ form button {
   text-align: center;
   height: 50px;
   color: #38761d;
+}
+
+code {
+  font-family: 'Courier Prime', monospace;
 }
