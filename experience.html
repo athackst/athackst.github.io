@@ -5,8 +5,8 @@ redirect_from: /experience.html
 ---
 <div class="body-text">
   <ul class="experience">
-    {%- for post in site.posts %}
-
+    {%- assign timeline = site.posts | where_exp: "post", "post.categories contains 'experience'" %}
+    {%- for post in timeline %}
     <li>
       <div class="entry-content">
         <h5 style="text-align: center;">{{ post.date | date: '%B %d, %Y' }}</h5>
