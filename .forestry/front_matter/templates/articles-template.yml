@@ -1,0 +1,26 @@
+---
+label: articles-template
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+  default: text-entry
+- type: text
+  name: title
+  label: title
+- type: text
+  name: category
+  label: category
+- type: list
+  name: tags
+  label: tags
+- type: file
+  name: image
+  label: image
+- type: text
+  name: summary
+  label: summary
+- type: text
+  name: redirect_from
+  label: redirect_from
