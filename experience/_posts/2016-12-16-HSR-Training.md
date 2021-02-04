@@ -1,5 +1,5 @@
 ---
-layout: video_entry
+layout: video-entry
 video: https://www.youtube.com/embed/wgdfpcVqSMs
 title: HSR Training
 ---

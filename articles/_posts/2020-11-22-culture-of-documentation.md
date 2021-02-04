@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: Creating a Culture of Documentation
 category: Leadership
 tags: [docker, documentation]

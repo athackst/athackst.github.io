@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: Ignition vs Gazebo
 category: Robotics
 series: Simulation

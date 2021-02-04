@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: VSCode, Docker, and Github Pages
 category: Software Development
 tags: [vscode, docker, github_pages]

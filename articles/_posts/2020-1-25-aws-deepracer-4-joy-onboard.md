@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: Running the gamepad onboard the DeepRacer
 category: Robotics
 series: DeepRacer

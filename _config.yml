@@ -35,6 +35,6 @@ defaults:
       path: "articles"
       type: "posts"
     values:
-      layout: text_entry
+      layout: text-entry
       permalink: /articles/:title:output_ext
       toc: true

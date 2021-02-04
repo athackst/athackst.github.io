@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: Running the DeepRacer with ROS2
 category: Robotics
 series: DeepRacer

@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: "athackst/prosilica_driver"
 link: https://github.com/athackst/prosilica_driver
 ---

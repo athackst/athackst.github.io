@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: Supercharging VSCode with Tasks
 category: Software Development
 tags: [vscode]

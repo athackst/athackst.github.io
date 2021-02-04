@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: Bridging ROS and ROS2
 category: Robotics
 tags: [ros, ros2]

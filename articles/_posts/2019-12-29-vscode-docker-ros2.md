@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: VSCode, Docker, and ROS2
 category: Robotics
 series: ROS

@@ -1,5 +1,5 @@
 ---
-layout: image_entry
+layout: image-entry
 title: Featured in Silicon Valley Robotics 
 link: https://svrobo.org/women-in-robotics-on-international-womens-day-2019/
 image: /assets/img/UR-Womens-Day-creative-1170x460.jpg

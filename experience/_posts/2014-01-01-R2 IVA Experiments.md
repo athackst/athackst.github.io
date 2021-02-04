@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: Robonaut 2 - IVA Experiments On-Board ISS and Development Towards EVA Capability
 ---
 2014 ISS Research and Development Conference, American Astronautical Society  

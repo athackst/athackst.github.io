@@ -1,5 +1,5 @@
 ---
-layout: link_entry
+layout: link-entry
 title: ROS Contributor Spotlight
 link: https://www.ros.org/news/2017/11/ros-contributor-allison-thackston.html
 ---

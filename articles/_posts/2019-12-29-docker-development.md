@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: "VSCode and Docker"
 category: Software Development
 tags: [vscode, docker]

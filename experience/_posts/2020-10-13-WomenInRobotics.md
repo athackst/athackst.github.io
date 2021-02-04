@@ -1,5 +1,5 @@
 ---
-layout: image_entry
+layout: image-entry
 title: Named one of the Women In Robotics You Should Know
 link: https://robohub.org/30-women-in-robotics-you-need-to-know-about-2020/
 image: /assets/img/ALD2020-BannerA.jpg

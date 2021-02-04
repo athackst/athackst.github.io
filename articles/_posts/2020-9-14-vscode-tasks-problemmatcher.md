@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: VSCode Tasks Problem Matchers
 category: Software Development
 tags: [vscode]

@@ -1,5 +1,5 @@
 ---
-layout: video_entry
+layout: video-entry
 video: https://www.youtube.com/embed/Jwgf3wmiA04
 title: R2 in One Direction video
 ---

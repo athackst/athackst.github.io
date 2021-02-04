@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: Setting Up a Local Docker Registry
 category: Software Development
 tags: [docker]

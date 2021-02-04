@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: Controlling the DeepRacer with a gamepad
 category: Robotics
 series: DeepRacer

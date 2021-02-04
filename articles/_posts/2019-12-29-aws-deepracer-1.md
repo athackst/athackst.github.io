@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: Unboxing the AWS Deep Racer
 category: Robotics
 series: DeepRacer

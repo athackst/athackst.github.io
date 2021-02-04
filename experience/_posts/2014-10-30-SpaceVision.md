@@ -1,5 +1,5 @@
 ---
-layout: image_entry
+layout: image-entry
 title: Space Vision Invited Panelist
 image: /assets/img/SpaceVision-2014_banner.png
 link: https://www.curiosity.ly/speakers-1

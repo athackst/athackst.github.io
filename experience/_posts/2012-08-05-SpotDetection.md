@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: Multi-Waveband Spot Detection with Solar Glint Suppression
 ---
 White paper published in the Military Sensor Symposium Parallel Conference 2012.

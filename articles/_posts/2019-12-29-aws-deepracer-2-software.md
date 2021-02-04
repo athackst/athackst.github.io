@@ -1,5 +1,5 @@
 ---
-layout: text_entry
+layout: text-entry
 title: Digging into ROS on the DeepRacer
 category: Robotics
 series: DeepRacer
