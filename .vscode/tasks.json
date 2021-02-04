@@ -6,7 +6,7 @@
         {
             "label": "w: serve",
             "type": "shell",
-            "command": "bundle exec jekyll serve",
+            "command": "bundle exec jekyll serve --incremental --livereload",
             "problemMatcher": []
         },
         {
@@ -37,7 +37,7 @@
         {
             "label": "c: clean",
             "type": "shell",
-            "command": "rm -fr _site/*",
+            "command": "rm -fr _site vendor",
             "problemMatcher": [],
         }
     ]
