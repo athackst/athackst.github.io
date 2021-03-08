@@ -2,7 +2,6 @@
 layout: image-entry
 title: Space Vision Invited Panelist
 image: /assets/img/SpaceVision-2014_banner.png
-link: https://www.curiosity.ly/speakers-1
 ---
 I was an invited speaker at the SpaceVision annual national conference of Students for the Exploration and Development of Space.  
 
