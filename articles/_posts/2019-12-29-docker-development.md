@@ -36,7 +36,7 @@ So I've decided to share this little hack with you.
 
 ## VS Code
 
-For those of you who are unaware.  [VS Code](https://code.visualstudio.com/) is an open source editor that was developed by Microsoft.  It is deliciously compatible on nearly any operating system and has a large base of extensions you can download and install.
+For those of you who are unaware. [VS Code](https://code.visualstudio.com/) is an open source editor that was developed by Microsoft.  It is deliciously compatible on nearly any operating system and has a large base of extensions you can download and install.
 
 For me, it has been far more stable than [atom](https://atom.io/) and less complicated to set up than [sublime](https://www.sublimetext.com/).  Also, vscode has intellisense (which is just awesome), and it has built in debugging.  
 
@@ -66,7 +66,7 @@ The following instructions assumes you are somewhat familiar with vscode and doc
 
 [Download and install](https://code.visualstudio.com/download) VS Code from the [website](https://code.visualstudio.com/) to install the editor.
 
-Then, follow the instructions on [dockerhub](https://hub.docker.com/search/?type=edition&offering=community) to install docker CE (community edition).
+Then, follow the instructions on [dockerhub](https://docs.docker.com/get-docker/) to install docker CE (community edition).
 
 Finally, you'll want to install the vscode plugin that allows you to attach to a docker container. [Instructions here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
