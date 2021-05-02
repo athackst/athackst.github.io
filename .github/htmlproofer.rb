@@ -21,7 +21,9 @@ options = {
   parallel: { in_processes: 3 },
   typhoeus: {
     ssl_verifypeer: false,
-    ssl_verifyhost: 0 }
+    ssl_verifyhost: 0,
+    timeout: 30,
+    connecttimeout: 20 }
 }
 
 HTMLProofer.check_directory("./_site", options).run
