@@ -10,7 +10,7 @@
 			"VARIANT": "bullseye",
 			// Enable Node.js: pick the latest LTS version
 			"NODE_VERSION": "none"
-		}	
+		}
 	},
 	"remoteUser": "vscode",
 	"mounts": [
@@ -28,16 +28,16 @@
 	"postCreateCommand": "sh .devcontainer/post-create.sh",
 	// Add the IDs of extensions you want installed when the container is created in the array below.
 	"extensions": [
-		"redhat.vscode-yaml",
 		"sissel.shopify-liquid",
 		"ginfuru.ginfuru-vscode-jekyll-syntax",
 		"ginfuru.vscode-jekyll-snippets",
 		"yzhang.markdown-all-in-one",
-		"davidanson.vscode-markdownlint",
 		"ecmel.vscode-html-css",
-		"aeschli.vscode-css-formatter",
 		"streetsidesoftware.code-spell-checker",
 		"ms-vscode.wordcount",
-		"eamodio.gitlens"
+		"eamodio.gitlens",
+		"Shopify.ruby-lsp",
+		"esbenp.prettier-vscode",
+		"foxundermoon.shell-format"
 	]
 }

@@ -7,10 +7,21 @@
         ".vscode",
         ".vscode-insiders",
         ".devcontainer",
-        ".github"
+        ".github",
+        "_config.yml",
+        "Gemfile",
+        "Gemfile.lock"
     ],
-    "cSpell.words": [
-        "htmlproofer",
-        "jemoji"
-    ]
+    "rubyLsp.enabledFeatures": {
+        "documentHighlights": true,
+        "documentLink": true,
+        "documentSymbols": true,
+        "foldingRanges": true,
+        "selectionRanges": true,
+        "semanticHighlighting": true,
+        "formatting": true,
+        "diagnostics": true,
+        "codeActions": true,
+        "onTypeFormatting": true
+    },
 }

@@ -8,6 +8,6 @@ group :jekyll_plugins do
 end
 
 group :development do
-    gem 'rubocop'
+    gem "ruby-lsp", require: false
     gem 'html-proofer'
   end

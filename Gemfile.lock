@@ -9,7 +9,6 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
-    ast (2.4.2)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -210,11 +209,11 @@ GEM
       gemoji (~> 3.0)
       html-pipeline (~> 2.2)
       jekyll (>= 3.0, < 5.0)
-    json (2.6.2)
     kramdown (2.3.2)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
+    language_server-protocol (3.17.0.0)
     liquid (4.0.3)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -236,32 +235,21 @@ GEM
       faraday (>= 1, < 3)
       sawyer (~> 0.9)
     parallel (1.22.1)
-    parser (3.1.2.1)
-      ast (~> 2.4.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+    prettier_print (0.1.0)
     public_suffix (4.0.7)
     racc (1.6.0)
     rainbow (3.1.1)
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    regexp_parser (2.5.0)
     rexml (3.2.5)
     rouge (3.26.0)
-    rubocop (1.35.1)
-      json (~> 2.3)
-      parallel (~> 1.10)
-      parser (>= 3.1.2.1)
-      rainbow (>= 2.2.2, < 4.0)
-      regexp_parser (>= 1.8, < 3.0)
-      rexml (>= 3.2.5, < 4.0)
-      rubocop-ast (>= 1.20.1, < 2.0)
-      ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.21.0)
-      parser (>= 3.1.1.0)
-    ruby-progressbar (1.11.0)
+    ruby-lsp (0.3.0)
+      language_server-protocol
+      sorbet-runtime
+      syntax_tree (>= 3.4)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     safe_yaml (1.0.5)
@@ -275,7 +263,11 @@ GEM
       faraday (>= 0.17.3, < 3)
     simpleidn (0.2.1)
       unf (~> 0.1.4)
-    terminal-table (1.6.0)
+    sorbet-runtime (0.5.10390)
+    syntax_tree (3.5.0)
+      prettier_print
+    terminal-table (1.8.0)
+      unicode-display_width (~> 1.1, >= 1.1.1)
     thread_safe (0.3.6)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
@@ -284,7 +276,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
-    unicode-display_width (2.2.0)
+    unicode-display_width (1.8.0)
     yell (2.2.2)
     zeitwerk (2.6.0)
 
@@ -298,7 +290,7 @@ DEPENDENCIES
   jekyll-github-metadata
   jekyll-octicons
   jemoji
-  rubocop
+  ruby-lsp
 
 BUNDLED WITH
    2.3.11

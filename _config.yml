@@ -10,8 +10,7 @@ plugins:
 permalink: /:year/:month/:day/:title/
 
 defaults:
-  -
-    scope:
+  - scope:
       path: "" # an empty string here means all files in the project
       type: "posts"
     values:
@@ -27,8 +26,8 @@ projects:
     archived: true
     forks: true
     projects:
-    - athackst.github.io
-    - athackst.mkdocs
+      - athackst.github.io
+      - athackst.mkdocs
 
 social_media:
   # behance: your_username
