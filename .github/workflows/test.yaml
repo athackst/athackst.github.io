@@ -1,13 +1,26 @@
 name: Test site
-on: [push]
+on:
+  # Run on every pull request
+  pull_request:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: ruby/setup-ruby@v1
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa
         with:
-          ruby-version: 3 # Not needed with a .ruby-version file
-      - run: bundle install
-      - run: bundle exec jekyll build
-      - run: ruby .github/htmlproofer.rb
+          ruby-version: '3.0' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 0 # Increment this number if you need to re-download cached gems
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v2
+      - name: Build with Jekyll
+        # Outputs to the './_site' directory by default
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+      - name: Test with htmlproofer
+        run: ruby .github/htmlproofer.rb
