@@ -1,0 +1,68 @@
+layout: sidebar
+style: light
+repository: athackst/athackst.github.io
+
+plugins:
+  - jekyll-octicons
+  - jekyll-github-metadata
+  - jemoji
+
+permalink: /:year/:month/:day/:title/
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
+
+projects:
+  sort_by: stars
+  # sort_by options:
+  #   - pushed
+  #   - stars
+  limit: 24
+  exclude:
+    archived: true
+    forks: true
+    projects:
+    - athackst.github.io
+    - athackst.mkdocs
+
+social_media:
+  # behance: your_username
+  # dribbble: your_username
+  docker: althack
+  # facebook: your_username
+  # hackerrank: your_username
+  # instagram: your_username
+  # keybase: your_username
+  linkedin: allisonthackston
+  # mastodon: your_username
+  # medium: your_username
+  # stackoverflow: your_user_id
+  # telegram: your_username
+  twitter: althack
+  # unsplash: your_username
+  # vk: your_username
+  vscode: althack
+  website: https://www.allisonthackston.com
+  # youtube: your_username
+
+topics:
+  - name: ROS / Robotics
+    web_url: https://www.ros.org/
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/15/Robot_Operating_System_logo.svg
+
+  - name: Women in Robotics
+    web_url: https://womeninrobotics.org
+    image_url: https://www.womeninrobotics.org/assets/images/logo/WiRLogo-200x200t.png
+
+  - name: Waymo
+    web_url: https://waymo.com/
+    image_url: https://storage.googleapis.com/sdc-prod/v1/press/waymo_logo.png
+
+  - name: NASA
+    web_url: https://www.nasa.gov/
+    image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png
