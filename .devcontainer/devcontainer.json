@@ -25,7 +25,7 @@
 		// Live reload server
 		35729
 	],
-	"postCreateCommand": "sh .devcontainer/post-create.sh",
+	// "postCreateCommand": "sh .devcontainer/post-create.sh",
 	// Add the IDs of extensions you want installed when the container is created in the array below.
 	"extensions": [
 		"sissel.shopify-liquid",
@@ -36,7 +36,6 @@
 		"streetsidesoftware.code-spell-checker",
 		"ms-vscode.wordcount",
 		"eamodio.gitlens",
-		"Shopify.ruby-lsp",
 		"esbenp.prettier-vscode",
 		"foxundermoon.shell-format"
 	]
