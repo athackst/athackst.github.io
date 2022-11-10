@@ -47,7 +47,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Ruby
-        uses: ruby/setup-ruby@ece82769428359c077b5a5eaff268902a303c101
+        uses: ruby/setup-ruby@8ddb7b3348b3951590db24c346e94ebafdabc926
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
