@@ -9,26 +9,18 @@
 			// Use bullseye when on local arm64/Apple Silicon.
 			"VARIANT": "bullseye",
 			// Enable Node.js: pick the latest LTS version
-			"NODE_VERSION": "none"
+			"NODE_VERSION": "16"
 		}
 	},
-	"remoteUser": "vscode",
+	// Mount local aliases if any
 	"mounts": [
 		"source=/${env:HOME}/.bash_aliases,target=/home/vscode/.bash_aliases,type=bind,consistency=cached",
 		"source=/${env:HOME}/.aliases,target=/home/vscode/.aliases,type=bind,consistency=cached"
 	],
+	// Set *default* container specific settings.json values on container create.
 	"settings": {},
-	// Uncomment the next line if you want to publish any ports.
-	"appPort": [
-		// Jekyll server
-		4000,
-		// Live reload server
-		35729
-	],
-	// "postCreateCommand": "sh .devcontainer/post-create.sh",
 	// Add the IDs of extensions you want installed when the container is created in the array below.
 	"extensions": [
-		"sissel.shopify-liquid",
 		"ginfuru.ginfuru-vscode-jekyll-syntax",
 		"ginfuru.vscode-jekyll-snippets",
 		"yzhang.markdown-all-in-one",
@@ -38,5 +30,15 @@
 		"eamodio.gitlens",
 		"esbenp.prettier-vscode",
 		"foxundermoon.shell-format"
-	]
+	],
+	// Uncomment the next line if you want to publish any ports.
+	"forwardPorts": [
+		// Jekyll server
+		4000,
+		// Live reload server
+		35729
+	],
+	"postCreateCommand": "sh .devcontainer/post-create.sh",
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
 }
