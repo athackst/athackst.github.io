@@ -5,6 +5,7 @@ group :jekyll_plugins do
   gem "jekyll-github-metadata"
   gem "jekyll-octicons"
   gem "jemoji"
+  gem 'dotenv', '~> 2.7'
 end
 
 group :development do
