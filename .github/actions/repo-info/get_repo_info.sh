@@ -39,6 +39,7 @@ for repo in $(echo "$repos_json" | jq -r '.name'); do
   issues_response=$(curl -sSL "${headers[@]}" "$issues_url")
   issues_json=$(echo "$issues_response" | jq -r '. | length')
   issues_json=$((issues_json - prs_json))
+  echo "Num Issues: $issues_json"
   html_url_json=$(echo "$repos_json" | jq -r "select(.name == \"$repo\") | .html_url")
   echo "HTML URL: $html_url_json"
   repo_info+=("$(echo "{\"name\":\"$repo\",\"html_url\":\"$html_url_json\",\"issues\":$issues_json,\"pull_requests\":$prs_json}" | jq -c '.')")

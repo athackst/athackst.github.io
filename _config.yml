@@ -6,6 +6,7 @@ plugins:
   - jekyll-octicons
   - jekyll-github-metadata
   - jemoji
+  - dotenv
 
 permalink: /:year/:month/:day/:title/
 
