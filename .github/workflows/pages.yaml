@@ -50,20 +50,23 @@ jobs:
         uses: ruby/setup-ruby@d3c9825d67b0d8720afdfdde5af56c79fdb38d16
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v3
+          cache-version: 4 # Increment this number if you need to re-download cached gems
       - name: Get repository info
         uses: ./.github/actions/repo-info/
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
           JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Debug output
+        run: |
+          tree
       - name: Test with htmlproofer
         run: bundle exec ruby .github/htmlproofer.rb
       - name: Upload artifact

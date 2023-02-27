@@ -17,7 +17,7 @@ inputs:
   output_file:
     description: The name and location to save the output
     required: true
-    default: _data/repo_info.json
+    default: _data/repo-info.json
 
 runs:
   using: "composite"

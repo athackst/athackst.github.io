@@ -24,8 +24,10 @@ headers=(
 # Get the list of repositories for the user, including name and html_url properties
 repos_url="$github_api/users/$user_name/repos?type=owner&sort=updated"
 repos_response=$(curl -sSL "${headers[@]}" "$repos_url")
-echo $repos_response
 repos_json=$(echo "$repos_response" | jq -r '.[] | {name, html_url}')
+if [ $? -ne 0 ]; then
+  echo $repos_response
+fi
 
 # Loop through the repositories and get the number of open pull requests and issues
 repo_info=()
@@ -50,3 +52,5 @@ echo "Saving ${repo_info[@]}"
 
 # Save the repository information to a JSON file
 echo "${repo_info[@]}" | jq -s '.' > $output_file
+
+echo "Sent to $PWD/$output_file"
