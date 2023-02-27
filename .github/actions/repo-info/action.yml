@@ -1,0 +1,32 @@
+name: Get Repo Action
+author: athackst
+description: Get repository information as a json file
+branding:
+  icon: link
+  color: green
+
+inputs:
+  # required inputs 
+  user:
+    description: The username to query for repositories
+    required: true
+    default: ${{ github.repository_owner }}
+  token:
+    description: The github token to use for the query
+    required: true
+  output_file:
+    description: The name and location to save the output
+    required: true
+    default: _data/repo_info.json
+
+runs:
+  using: "composite"
+  steps:
+    - id: get-repo-info
+      run: |
+        ./.github/actions/repo-info/get_repo_info.sh
+      shell: bash
+      env:
+        INPUT_TOKEN: ${{ inputs.token }}
+        INPUT_USER: ${{ inputs.user }}
+        INPUT_OUTPUT_FILE: ${{ inputs.output_file }}
