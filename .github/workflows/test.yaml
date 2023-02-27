@@ -22,5 +22,7 @@ jobs:
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build
+        env:
+            JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Test with htmlproofer
         run: bundle exec ruby .github/htmlproofer.rb

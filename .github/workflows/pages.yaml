@@ -63,6 +63,7 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Test with htmlproofer
         run: bundle exec ruby .github/htmlproofer.rb
       - name: Upload artifact
