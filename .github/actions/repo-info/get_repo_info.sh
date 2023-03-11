@@ -9,9 +9,7 @@ fi
 # Set the GitHub API endpoint, user name and personal access token
 github_api="https://api.github.com"
 user_name=${INPUT_USER:-"$GITHUB_USERNAME"}
-echo $user_name
 access_token=${INPUT_TOKEN:-"$JEKYLL_GITHUB_TOKEN"}
-echo $access_token
 output_file=${INPUT_OUTPUT_FILE:-"_data/repo-info.json"}
 
 # Set headers to include the access token

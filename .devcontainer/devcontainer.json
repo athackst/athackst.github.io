@@ -2,14 +2,12 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/master/containers/ubuntu-18.04-git
 {
 	"name": "Github Pages",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"args": {
-			// Update 'VARIANT' to pick a Debian OS version: bullseye, buster
-			// Use bullseye when on local arm64/Apple Silicon.
-			"VARIANT": "bullseye",
-			// Enable Node.js: pick the latest LTS version
-			"NODE_VERSION": "16"
+	"image": "mcr.microsoft.com/devcontainers/ruby:3-bullseye",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "latest"
 		}
 	},
 	// Mount local aliases if any
@@ -18,19 +16,21 @@
 		"source=/${env:HOME}/.aliases,target=/home/vscode/.aliases,type=bind,consistency=cached"
 	],
 	// Set *default* container specific settings.json values on container create.
-	"settings": {},
-	// Add the IDs of extensions you want installed when the container is created in the array below.
-	"extensions": [
-		"ginfuru.ginfuru-vscode-jekyll-syntax",
-		"ginfuru.vscode-jekyll-snippets",
-		"yzhang.markdown-all-in-one",
-		"ecmel.vscode-html-css",
-		"streetsidesoftware.code-spell-checker",
-		"ms-vscode.wordcount",
-		"eamodio.gitlens",
-		"esbenp.prettier-vscode",
-		"foxundermoon.shell-format"
-	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ginfuru.ginfuru-vscode-jekyll-syntax",
+				"ginfuru.vscode-jekyll-snippets",
+				"yzhang.markdown-all-in-one",
+				"ecmel.vscode-html-css",
+				"streetsidesoftware.code-spell-checker",
+				"ms-vscode.wordcount",
+				"eamodio.gitlens",
+				"esbenp.prettier-vscode",
+				"foxundermoon.shell-format"
+			]
+		}
+	},
 	// Uncomment the next line if you want to publish any ports.
 	"forwardPorts": [
 		// Jekyll server
