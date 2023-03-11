@@ -11,4 +11,5 @@ end
 group :development do
     gem "ruby-lsp", require: false
     gem 'html-proofer'
-  end
+    gem "webrick", "~> 1.8"
+end
