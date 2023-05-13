@@ -8,7 +8,10 @@ options = {
     timeout: 120,
     connecttimeout: 60
   },
-  ignore_urls: ["https://www.linkedin.com/in/allisonthackston"]
+  ignore_urls: [
+    "https://www.linkedin.com/in/allisonthackston",
+    /twitter.com/
+  ]
 }
 
 HTMLProofer.check_directory("./_site", options).run
