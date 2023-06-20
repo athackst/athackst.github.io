@@ -258,7 +258,7 @@ GEM
       ffi (~> 1.0)
     rexml (3.2.5)
     rouge (3.26.0)
-    ruby-lsp (0.6.0)
+    ruby-lsp (0.6.1)
       language_server-protocol (~> 3.17.0)
       sorbet-runtime
       syntax_tree (>= 6.1.1, < 7)
