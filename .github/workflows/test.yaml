@@ -31,4 +31,4 @@ jobs:
         run: |
           tree
       - name: Test with htmlproofer
-        run: bundle exec ruby .github/htmlproofer.rb
+        run: .github/scripts/htmlproofer/entrypoint.sh

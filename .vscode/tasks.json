@@ -41,9 +41,9 @@
             "label": "t: test",
             "type": "shell",
             "problemMatcher": [],
-            "command": "bundle exec ruby .github/htmlproofer.rb",
+            "command": ".github/scripts/htmlproofer/entrypoint.sh",
             "dependsOn": [
-                "b: build"
+                "b: build website"
             ],
             "group": {
                 "kind": "test",
