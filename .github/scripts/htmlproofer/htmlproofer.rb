@@ -6,7 +6,9 @@ options = {
     ssl_verifypeer: false,
     ssl_verifyhost: 0,
     timeout: 120,
-    connecttimeout: 60
+    connecttimeout: 60,
+    cookiefile: ".cookies",
+    cookiejar: ".cookies"
   },
   ignore_urls: [
     "https://www.linkedin.com/in/allisonthackston",
