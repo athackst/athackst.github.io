@@ -4,46 +4,59 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "w: serve website",
+            "label": "jekyll: serve",
             "type": "shell",
             "command": "bundle exec jekyll serve --livereload",
             "problemMatcher": []
         },
         {
-            "label": "w: drafts",
+            "label": "jekyll: serve (drafts)",
             "type": "shell",
-            "command": "bundle exec jekyll serve --drafts",
+            "command": "bundle exec jekyll serve --drafts --livereload",
             "problemMatcher": []
         },
         {
-            "label": "b: build website",
+            "label": "jekyll: build",
+            "type": "shell",
+            "command": "bundle exec jekyll build --verbose",
+            "problemMatcher": []
+        },
+        {
+            "label": "bundle: update",
+            "type": "shell",
+            "command": "bundle update",
+            "problemMatcher": []
+        },
+        {
+            "label": "bundle: install",
+            "type": "shell",
+            "command": "bundle install",
+            "problemMatcher": []
+        },
+        {
+            "label": "build",
             "type": "shell",
             "command": "bundle exec jekyll build --verbose",
             "problemMatcher": [],
+            "dependsOn": ["get repo info"],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
         },
         {
-            "label": "u: update",
+            "label": "get repo info",
             "type": "shell",
-            "command": "bundle update",
+            "command": ".github/actions/repo-info/get_repo_info.sh",
             "problemMatcher": []
         },
         {
-            "label": "i: install",
-            "type": "shell",
-            "command": "bundle install",
-            "problemMatcher": []
-        },
-        {
-            "label": "t: test",
+            "label": "test",
             "type": "shell",
             "problemMatcher": [],
             "command": ".github/scripts/htmlproofer/entrypoint.sh",
             "dependsOn": [
-                "b: build website"
+                "build"
             ],
             "group": {
                 "kind": "test",
@@ -51,7 +64,7 @@
             },
         },
         {
-            "label": "c: clean",
+            "label": "clean",
             "type": "shell",
             "command": "rm -fr _site vendor .jekyll-cache",
             "problemMatcher": [],
