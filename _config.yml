@@ -50,6 +50,10 @@ social_media:
   website: https://www.allisonthackston.com
   # youtube: your_username
 
+analytics:
+  provider: google
+  property: G-VPNW28KW9L
+
 topics:
   - name: ROS / Robotics
     web_url: https://www.ros.org/
