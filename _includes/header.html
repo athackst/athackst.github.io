@@ -1,16 +1,15 @@
-{% if site.style == 'dark' %}
+<!doctype html>
+{%- if site.style == 'dark' %}
   {% assign icon_color = "#ffffff" %}
 {% else %}
   {% assign icon_color = "#24292e" %}
 {% endif %}
 
-{% assign content = page.content %}
+{%- assign content = page.content %}
+{%- assign posts_total = site.posts | size %}
+{%- assign user = site.github.owner %}
 
-{% assign posts_total = site.posts | size %}
-
-{% assign user = site.github.owner %}
-
-{% if page.path contains '_posts' %}
+{%- if page.path contains '_posts' %}
   {% assign page_title = page.title %}
   {% assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
 {% else %}
@@ -18,7 +17,6 @@
   {% assign meta_description = user.bio | strip_html | strip_newlines | xml_escape | truncate: 300 %}
 {% endif %}
 
-<!doctype html>
 <html class="min-height-full min-width">
   <head>
     <meta charset="utf-8">
@@ -31,4 +29,17 @@
     <link href="{{ "/assets/styles.css" | relative_url }}" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
   </head>
+  
+{% if site.analytics.provider == 'google' %}
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.property }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', '{{ site.analytics.property }}');
+  </script>
+{%- endif %}
+
   <body class="bg-white min-height-full" {% if site.style == 'dark' %}style="background-color: #2f363d !important"{% endif %}>
