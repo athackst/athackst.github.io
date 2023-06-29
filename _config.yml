@@ -9,6 +9,21 @@ plugins:
 
 permalink: /:year/:month/:day/:title/
 
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - vendor
+  - .gitignore
+  - .jekyll-cache/
+  - node_modules/
+
+sass:
+  sass_dir: _sass
+  style: compact # possible values: nested expanded compact compressed
+
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
