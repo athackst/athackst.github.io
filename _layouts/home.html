@@ -3,7 +3,9 @@ layout: default
 ---
 {%- assign posts_total = site.posts | size %}
 {% if site.layout == 'stacked' %}
-  <div class="container-lg py-6 p-responsive text-center">
+<div class="container-lg py-3">
+  {% include nav.html breadcrumbs=false %}
+  <div class="p-responsive text-center">
     {% include masthead.html metadata=true %}
 
     <div>
@@ -15,31 +17,35 @@ layout: default
     </div>
 
     {% if site.topics %}
-      <div class="my-6">
-        {% include interests.html %}
-      </div>
+    <div class="my-6">
+      {% include interests.html %}
+    </div>
     {% endif %}
 
     {% unless posts_total == 0 %}
-      <div class="my-6">
-        {% include thoughts.html %}
-      </div>
+    <div class="my-6">
+      {% include thoughts.html %}
+    </div>
     {% endunless %}
   </div>
+</div>
 {% else %}
-    {% unless content == ""  %}
-      <div class="f4 mb-6">
-        {{ content }}
-      </div>
-    {% endunless %}
+<div>
+  {% include nav.html breadcrumbs=false %}
+  {% unless content == "" %}
+  <div class="f4 mb-6">
+    {{ content }}
+  </div>
+  {% endunless %}
 
-    {% include projects.html %}
+  {% include projects.html %}
 
-    {% if site.topics %}
-      {% include interests.html %}
-    {% endif %}
+  {% if site.topics %}
+    {% include interests.html %}
+  {% endif %}
 
-    {% unless posts_total == 0 %}
-      {% include thoughts.html %}
-    {% endunless %}
+  {% unless posts_total == 0 %}
+    {% include thoughts.html %}
+  {% endunless %}
+</div>
 {% endif %}

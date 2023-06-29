@@ -10,7 +10,9 @@
       <div class="Header-item Header-item--full">
         {% if user.name %}{{ user.name }}{% else %}{{ user.login }}{% endif %}
       </div>
+      <div class="Header-item">
       {% include social.html %}
+      </div>
       <div class="Header-item mr-0 ml-3">
         <img class="avatar" height="20" alt="{{ user.name }}" src="{{ user.avatar_url }}" width="20">
       </div>
