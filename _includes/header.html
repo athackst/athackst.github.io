@@ -1,12 +1,3 @@
-<!doctype html>
-{%- if site.style == 'dark' %}
-  {% assign icon_color = "#ffffff" %}
-{% else %}
-  {% assign icon_color = "#24292e" %}
-{% endif %}
-
-{%- assign content = page.content %}
-{%- assign posts_total = site.posts | size %}
 {%- assign user = site.github.owner %}
 
 {%- if page.path contains '_posts' %}
@@ -17,20 +8,20 @@
   {% assign meta_description = user.bio | strip_html | strip_newlines | xml_escape | truncate: 300 %}
 {% endif %}
 
-<html class="min-height-full min-width">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page_title }}</title>
-    <meta name="description" content="{{ meta_description }}" />
-    <meta property="og:title" content="{{ user.name }}" />
-    <meta property="og:image" content="{{ user.avatar_url }}" />
-    <meta property="og:description" content="{{ meta_description }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="{{ "/assets/styles.css" | relative_url }}" rel="stylesheet" type="text/css">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  </head>
-  
-{% if site.analytics.provider == 'google' %}
+<head>
+  <meta charset="utf-8">
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ meta_description }}" />
+  <meta property="og:title" content="{{ user.name }}" />
+  <meta property="og:image" content="{{ user.avatar_url }}" />
+  <meta property="og:description" content="{{ meta_description }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/octicons-css/octicons.min.css">
+  <link href="{{ "/assets/styles.css" | relative_url }}" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+  {% if site.analytics.provider == 'google' %}
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.property }}"></script>
   <script>
@@ -40,6 +31,51 @@
 
     gtag('config', '{{ site.analytics.property }}');
   </script>
-{%- endif %}
+  {%- endif %}
 
-  <body class="bg-white min-height-full" {% if site.style == 'dark' %}style="background-color: #2f363d !important"{% endif %}>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var themeToggle = document.getElementById('theme-toggle');
+      var themeIcon = document.getElementById('theme-icon');
+      var htmlElement = document.getElementsByTagName('html')[0];
+
+      function getNextMode() {
+        var currentMode = htmlElement.getAttribute('data-color-mode');
+        var nextMode;
+        if (currentMode === 'auto') {
+          nextMode = 'dark';
+        } else if (currentMode === 'dark') {
+          nextMode = 'light'
+        } else {
+          nextMode = 'auto'
+        }
+        return nextMode;
+      }
+
+      function updateTheme(nextMode) {
+        htmlElement.setAttribute('data-color-mode', nextMode);
+      }
+
+      function updateThemeIcon(nextMode) {
+        if (nextMode === 'dark') {
+          nextIcon = 'moon';
+        } else if (nextMode === 'light') {
+          nextIcon = 'sun'
+        } else {
+          nextIcon = 'zap';
+        }
+        // Set the span to the themeIcon class
+        themeIcon.classList = "octicon octicon-" + nextIcon + "-24";
+      }
+
+      themeToggle.addEventListener('click', function () {
+        updateTheme(getNextMode());
+        updateThemeIcon(getNextMode());
+      });
+
+      // Initialize the theme icon based on the initial state
+      updateThemeIcon(getNextMode());
+    });
+  </script>
+
+</head>

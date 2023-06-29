@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+{% if site.layout == 'stacked' %}
+<div class="container-lg f4 text-left mt-3">
+  {% include nav.html breadcrumbs=true %}
+  <h1 class="f00-light lh-condensed mb-5">{{ page.title }}</h1>
+  {{ content }}
+</div>
+{% else %}
+<div class="f4 mb-6">
+  <div class="f4">
+    {% include nav.html breadcrumbs=true %}
+    <h1 class="f00-light lh-condensed mb-5">{{ page.title }}</h1>
+    {{ content }}
+  </div>
+</div>
+{% endif %}

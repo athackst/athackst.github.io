@@ -302,9 +302,11 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  bundler
   dotenv (~> 2.7)
   github-pages
   html-proofer
+  jekyll
   jekyll-github-metadata
   jekyll-octicons
   jemoji
