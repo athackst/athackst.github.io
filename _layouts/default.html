@@ -1,41 +1,70 @@
+{% if page.style %}
+{% assign style = page.style %}
+{% else %}
+{% assign style = site.style %}
+{% endif %}
+
+{% if page.breadcrumbs %}
+{% assign breadcrumbs = page.breadcrumbs %}
+{% else %}
+{% assign breadcrumbs = false %}
+{% endif %}
+
 <!doctype html>
 <html class="min-height-full min-width" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark_dimmed">
-  {% include header.html %}
-  <body class="min-height-full">
-    {% if site.layout == 'stacked' %}
+
+{% include header.html %}
+
+<body class="min-height-full">
+    {% if style == 'stacked' %}
+    <div class="container-lg p-responsive py-3 text-center ">
+        {% include nav.html breadcrumbs=breadcrumbs %}
+        {% include masthead.html metadata=true %}
+        <div class="p-responsive text-center">
+            {{ content }}
+        </div>
+    </div>
+    {% elsif style == 'sidebar' %}
+    <div class="d-md-flex min-height-full border-md-bottom">
+        <div
+            class="flex-self-stretch border-md-right border-gray-light col-md-5 col-lg-4 col-xl-3 px-4 py-6 text-center sidebar">
+            {% include masthead.html metadata=true %}
+        </div>
+        <div class="col-md-7 col-lg-8 col-xl-9 border-top border-md-top-0 px-4 ">
+            <div class="container-lg py-3 ml-0">
+                {% include nav.html breadcrumbs=breadcrumbs %}
+                <div class="p-responsive">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
     <div class="Header">
-      <div class="Header-item">
-        <a href="https://github.com/{{ user.login }}" class="Header-link f4 d-flex flex-items-center">{% octicon mark-github height:32 %}</a>
-      </div>
-      <div class="Header-item Header-item--full">
-        {% if user.name %}{{ user.name }}{% else %}{{ user.login }}{% endif %}
-      </div>
-      <div class="Header-item">
-      {% include social.html %}
-      </div>
-      <div class="Header-item mr-0 ml-3">
-        <img class="avatar" height="20" alt="{{ user.name }}" src="{{ user.avatar_url }}" width="20">
-      </div>
+        <div class="Header-item">
+            <a href="https://github.com/{{ user.login }}" class="Header-link f4 d-flex flex-items-center">{% octicon
+                mark-github height:32 %}</a>
+        </div>
+        <div class="Header-item Header-item--full">
+            {% if user.name %}{{ user.name }}{% else %}{{ user.login }}{% endif %}
+        </div>
+        <div class="Header-item">
+            {% include social.html %}
+        </div>
+        <div class="Header-item mr-0 ml-3">
+            <img class="avatar" height="20" alt="{{ user.name }}" src="{{ user.avatar_url }}" width="20">
+        </div>
     </div>
 
     <div class="container-lg py-3">
-    {{ content }}
-    </div>
-
-  {% else %}
-    <div class="d-md-flex min-height-full border-md-bottom">
-      <div class="flex-self-stretch border-md-right border-gray-light col-md-5 col-lg-4 col-xl-3 px-4 py-6 text-center sidebar">
-        {% include masthead.html metadata=true %}
-      </div>
-  
-      <div class="col-md-7 col-lg-8 col-xl-9 border-top border-md-top-0 px-4 ">
-        <div class="container-lg py-3 ml-0">
-        {{ content }}
+        {% include nav.html breadcrumbs=breadcrumbs %}
+        <div class="p-responsive">
+            {{ content }}
         </div>
-      </div>
     </div>
-  {% endif %}
-  
+    {% endif %}
+
     {% include footer.html %}
-  </body>
+</body>
+
 </html>

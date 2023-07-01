@@ -2,31 +2,19 @@
 layout: default
 ---
 {%- assign posts_total = site.posts | size %}
-{%- if site.layout == 'stacked' %}
-  {% assign content_styles = "p-responsive text-center" %}
-{% else %}
-  {% assign content_styles = "p-responsive" %}
+
+{% unless content == "" %}
+  {{ content }}
+{% endunless %}
+
+{% if site.repositories %}
+  {% include repositories.html %}
 {% endif %}
 
-{% include nav.html breadcrumbs=false %}
-<div class="{{ content_styles }}">
-  {% if site.layout == 'stacked' %}
-    {% include masthead.html metadata=true %}
-  {% endif %}
+{% if site.links %}
+  {% include links.html %}
+{% endif %}
 
-  {% unless content == "" %}
-    {{ content }}
-  {% endunless %}
-
-  {% if site.repositories %}
-    {% include repositories.html %}
-  {% endif %}
-
-  {% if site.links %}
-    {% include links.html %}
-  {% endif %}
-
-  {% unless posts_total == 0 %}
-    {% include blog.html %}
-  {% endunless %}
-</div>
+{% unless posts_total == 0 %}
+  {% include blog.html %}
+{% endunless %}

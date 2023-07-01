@@ -1,4 +1,4 @@
-layout: sidebar
+style: sidebar # One of "stacked", "sidebar", "topbar"
 repository: athackst/athackst.github.io
 
 plugins:
@@ -30,6 +30,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      breadcrumbs: true
 
 repositories:
   sort_by: stars
