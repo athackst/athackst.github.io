@@ -4,7 +4,7 @@ This website is built atop [the `github/personal-website` repository](https://gi
 
 ## Customization
 
-All content is set through `_config.yml`.  The rest of the template covers formatting and layout.  While the template supports posts and pages, I don't intend on using them in this site.  Instead, I will rely on weekly deploys to keep the projects updated.
+All content is set through `_config.yml`.  The rest of the template covers formatting and layout.  While the template supports posts and pages, I don't intend on using them in this site.  Instead, I will rely on weekly deploys to keep the repositories updated.
 
 ## License
 

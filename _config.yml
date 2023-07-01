@@ -31,7 +31,7 @@ defaults:
     values:
       layout: "post"
 
-projects:
+repositories:
   sort_by: stars
   # sort_by options:
   #   - pushed
@@ -40,7 +40,7 @@ projects:
   exclude:
     archived: true
     forks: true
-    projects:
+    repositories:
       - athackst.github.io
       - athackst.mkdocs
 
@@ -68,7 +68,7 @@ analytics:
   provider: google
   property: G-VPNW28KW9L
 
-topics:
+links:
   - name: ROS / Robotics
     web_url: https://www.ros.org/
     image_url: https://upload.wikimedia.org/wikipedia/commons/1/15/Robot_Operating_System_logo.svg
