@@ -1,6 +1,5 @@
 ---
 ---
-@import url("https://unpkg.com/@primer/css@^20.2.4/dist/primer.css");
 @import "highlight-syntax";
 
 // If a user adds a custom font, this component will stop it from bleeding into GitHub components:
@@ -68,6 +67,19 @@
   max-height: 95px;
   width: auto;
   height: auto;
+  object-fit: contain;
+}
+
+.img-contain {
+  object-fit: contain;
+}
+
+.img-thumb {
+  display: inline-block;
+  line-height: 1;
+  overflow: hidden;
+  vertical-align: middle;
+  object-fit: contain;
 }
 
 .sidebar {

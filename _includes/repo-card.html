@@ -18,18 +18,18 @@
   <div class="d-flex f6">
     <p class="mb-0 mt-2 f6 color-fg-muted">
     {% if repository.language %}
-      <span class="d-inline-block mr-3">
-        <span class="repo-language-color" style="background-color:{{ site.data.colors[repository.language]["color"] }}"></span>
+      <span class="d-inline-block mr-1">
+        <span class="repo-language-color" style="background-color:{{ site.data.colors[repository.language]['color'] }}" ></span>
         <span itemprop="programmingLanguage">{{ repository.language }}</span>
       </span>
     {% endif %}
     {% if repository.stargazers_count %}
-      <a href="{{ repository.html_url }}/stargazers" class="pinned-item-meta Link--muted">
+      <a href="{{ repository.html_url }}/stargazers" class="mr-1 Link--muted">
         {% octicon star height:16 fill:"#ffffff" %} {{ repository.stargazers_count }} 
       </a>
     {% endif %}
     {% if repository.forks_count %}
-      <a href="{{ repository.html_url }}/network/members" class="pinned-item-meta Link--muted">
+      <a href="{{ repository.html_url }}/network/members" class="mr-1 Link--muted">
         {% octicon repo-forked height:16 fill:"#ffffff" %} {{ repository.forks_count }} 
       </a>
     {% endif %}
