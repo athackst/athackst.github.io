@@ -99,3 +99,9 @@
 .pinned-item-meta {
   margin-left: 16px;
 }
+
+table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}

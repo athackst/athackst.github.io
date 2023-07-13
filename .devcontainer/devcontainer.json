@@ -27,7 +27,9 @@
 				"ms-vscode.wordcount",
 				"eamodio.gitlens",
 				"esbenp.prettier-vscode",
-				"foxundermoon.shell-format"
+				"foxundermoon.shell-format",
+				"dbaeumer.vscode-eslint",
+				"wingrunr21.vscode-ruby"
 			]
 		}
 	},
