@@ -13,8 +13,9 @@
   <title>{{ page_title }}</title>
   <meta name="description" content="{{ meta_description }}" />
   <meta property="og:title" content="{{ user.name }}" />
-  <meta property="og:image" content="{{ user.avatar_url }}" />
+  <meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}{{ user.avatar_url }}{% endif %}" />
   <meta property="og:description" content="{{ meta_description }}" />
+  <meta property="og:type" content="profile" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/octicons-css/octicons.min.css" rel="stylesheet" >
