@@ -45,7 +45,7 @@ breadcrumbs: true
                 } else {
                     const openSpan = document.createElement('span');
                     openSpan.classList.add('State', 'State--open');
-                    openSpan.innerHTML = `<img src="path/to/git-pull-request-icon.png" height="16" fill="#ffffff"> ${repository.pull_requests} Open`;
+                    openSpan.innerHTML = `{% octicon git-pull-request height:16 fill:"#ffffff" %} ${repository.pull_requests} Open`;
                     pullRequestsCell.appendChild(openSpan);
                 }
                 row.appendChild(pullRequestsCell);
@@ -73,7 +73,7 @@ breadcrumbs: true
                 } else {
                     const openSpan = document.createElement('span');
                     openSpan.classList.add('State', 'State--open');
-                    openSpan.innerHTML = `<img src="path/to/issue-opened-icon.png" height="16" fill="#ffffff"> ${repository.issues} Open`;
+                    openSpan.innerHTML = `{% octicon issue-opened height:16 fill:"#ffffff" %} ${repository.issues} Open`;
                     issuesCell.appendChild(openSpan);
                 }
                 row.appendChild(issuesCell);
