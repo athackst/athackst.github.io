@@ -261,7 +261,7 @@ GEM
       ffi (~> 1.0)
     rexml (3.2.5)
     rouge (3.26.0)
-    ruby-lsp (0.7.0)
+    ruby-lsp (0.7.3)
       language_server-protocol (~> 3.17.0)
       sorbet-runtime
       syntax_tree (>= 6.1.1, < 7)
@@ -279,7 +279,7 @@ GEM
       faraday (>= 0.17.3, < 3)
     simpleidn (0.2.1)
       unf (~> 0.1.4)
-    sorbet-runtime (0.5.10914)
+    sorbet-runtime (0.5.10921)
     syntax_tree (6.1.1)
       prettier_print (>= 1.2.0)
     terminal-table (1.8.0)
