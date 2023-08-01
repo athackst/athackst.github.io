@@ -1,36 +1,6 @@
+theme: jekyll-theme-profile
 style: sidebar # One of "stacked", "sidebar", "topbar"
 repository: athackst/athackst.github.io
-
-plugins:
-  - jekyll-octicons
-  - jekyll-github-metadata
-  - jemoji
-  - dotenv
-
-permalink: /:year/:month/:day/:title/
-
-# Exclude these files from your production _site
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
-  - vendor
-  - .gitignore
-  - .jekyll-cache/
-  - node_modules/
-
-sass:
-  sass_dir: _sass
-  style: compact # possible values: nested expanded compact compressed
-
-defaults:
-  - scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts"
-    values:
-      layout: "post"
-      breadcrumbs: true
 
 repositories:
   sort_by: stars
@@ -70,6 +40,14 @@ analytics:
   property: G-JG29YKVRKH
 
 links:
+  - name: Website
+    web_url: https://www.allisonthackston.com
+    image_url: https://www.allisonthackston.com/assets/img/profile.jpg
+
+  - name: Dashboard
+    web_url: https://dashboard.althack.dev
+    image_url: https://dashboard.althack.dev/assets/dashboard.png
+
   - name: ROS / Robotics
     web_url: https://www.ros.org/
     image_url: https://upload.wikimedia.org/wikipedia/commons/1/15/Robot_Operating_System_logo.svg

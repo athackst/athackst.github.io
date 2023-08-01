@@ -1,6 +1,6 @@
 # My personal website
 
-This website is built atop [the `github/personal-website` repository](https://github.com/github/personal-website) and [my vscode_website_workspace](https://github.com/athackst/vscode_website_workspace).
+This website is built atop of [the `althackst/jekyll-theme-profile` repository](https://github.com/athackst/jekyll-theme-profile).
 
 ## Customization
 
