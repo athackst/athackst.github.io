@@ -1,6 +1,7 @@
 theme: jekyll-theme-profile
 style: sidebar # One of "stacked", "sidebar", "topbar"
 repository: athackst/athackst.github.io
+title: althack.dev
 
 repositories:
   sort_by: stars
