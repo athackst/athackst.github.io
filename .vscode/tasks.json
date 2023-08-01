@@ -38,17 +38,10 @@
             "type": "shell",
             "command": "bundle exec jekyll build --verbose",
             "problemMatcher": [],
-            "dependsOn": ["get repo info"],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-        },
-        {
-            "label": "get repo info",
-            "type": "shell",
-            "command": ".github/actions/repo-info/get_repo_info.sh",
-            "problemMatcher": []
         },
         {
             "label": "test",
