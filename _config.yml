@@ -49,18 +49,16 @@ links:
     web_url: https://dashboard.althack.dev
     image_url: https://dashboard.althack.dev/assets/dashboard.png
 
-  - name: ROS / Robotics
-    web_url: https://www.ros.org/
+  - name: NASA JSC
+    web_url: https://gitlab.com/nasa-jsc-robotics
+    image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png
+    description: NASA JSC Robonaut + Valkyrie open source libraries
+
+  - name: Task Behavior Tree
+    web_url: https://github.com/search?q=org%3AToyotaResearchInstitute+task_behavior&type=repositories
     image_url: https://upload.wikimedia.org/wikipedia/commons/1/15/Robot_Operating_System_logo.svg
+    description: Behavior tree engine for ROS1
 
   - name: Women in Robotics
     web_url: https://womeninrobotics.org
     image_url: https://www.womeninrobotics.org/assets/images/logo/WiRLogo-200x200t.png
-
-  - name: Waymo
-    web_url: https://waymo.com/
-    image_url: https://storage.googleapis.com/sdc-prod/v1/press/waymo_logo.png
-
-  - name: NASA
-    web_url: https://www.nasa.gov/
-    image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png
