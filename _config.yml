@@ -1,5 +1,5 @@
 theme: jekyll-theme-profile
-style: sidebar # One of "stacked", "sidebar", "topbar"
+style: appbar # One of "stacked", "sidebar", "topbar"
 repository: athackst/athackst.github.io
 title: althack.dev
 
@@ -29,7 +29,7 @@ social_media:
   # medium: your_username
   # stackoverflow: your_user_id
   # telegram: your_username
-  twitter: althack
+  x: althack
   # unsplash: your_username
   # vk: your_username
   vscode: althack
