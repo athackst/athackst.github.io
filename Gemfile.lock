@@ -87,7 +87,7 @@ GEM
       sass (~> 3.4)
     jekyll-seo-tag (2.8.0)
       jekyll (>= 3.8, < 5.0)
-    jekyll-theme-profile (1.8.1)
+    jekyll-theme-profile (1.8.2)
       jekyll (> 3.5, < 5.0)
       jekyll-github-metadata (~> 2.9)
       jekyll-octicons (~> 19.4)
