@@ -25,7 +25,7 @@ GEM
     colorator (1.1.0)
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
-    console (1.23.2)
+    console (1.23.3)
       fiber-annotation
       fiber-local
     dotenv (2.8.1)

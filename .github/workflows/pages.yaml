@@ -68,7 +68,7 @@ jobs:
           tree
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
 
   test:
     runs-on: ubuntu-latest
@@ -81,7 +81,7 @@ jobs:
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 4 # Increment this number if you need to re-download cached gems
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: github-pages
       - name: Extract
@@ -103,4 +103,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v4
