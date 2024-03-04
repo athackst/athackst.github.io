@@ -28,7 +28,7 @@ GEM
     console (1.23.3)
       fiber-annotation
       fiber-local
-    dotenv (3.0.2)
+    dotenv (3.1.0)
     drb (2.2.0)
       ruby2_keywords
     em-websocket (0.5.3)
@@ -167,7 +167,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
-  dotenv (~> 3.0)
+  dotenv (~> 3.1)
   html-proofer
   jekyll
   jekyll-theme-profile
