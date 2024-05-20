@@ -50,7 +50,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Ruby
-        uses: ruby/setup-ruby@1198b074305f9356bd56dd4b311757cc0dab2f1c
+        uses: ruby/setup-ruby@6615b4b8a02c78c4d711c06df4b8a20aa685a45d
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 4 # Increment this number if you need to re-download cached gems
@@ -77,7 +77,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Ruby
-        uses: ruby/setup-ruby@1198b074305f9356bd56dd4b311757cc0dab2f1c
+        uses: ruby/setup-ruby@6615b4b8a02c78c4d711c06df4b8a20aa685a45d
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 4 # Increment this number if you need to re-download cached gems
