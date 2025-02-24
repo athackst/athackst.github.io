@@ -11,6 +11,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Remove lock
+        run: |
+          rm Gemfile.lock
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
 
