@@ -2,14 +2,11 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/master/containers/ubuntu-18.04-git
 {
 	"name": "Github Pages",
-	"image": "mcr.microsoft.com/devcontainers/ruby:3-bullseye",
+	"image": "mcr.microsoft.com/devcontainers/jekyll:3.3-bullseye",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	"features": {
-		"ghcr.io/devcontainers/features/node:1": {
-			"version": "latest"
-		}
-	},
+	// "features": {},
+
 	// Mount local aliases if any
 	"mounts": [
 		"source=/${env:HOME}/.bash_aliases,target=/home/vscode/.bash_aliases,type=bind,consistency=cached",
@@ -19,17 +16,15 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ginfuru.ginfuru-vscode-jekyll-syntax",
-				"ginfuru.vscode-jekyll-snippets",
-				"yzhang.markdown-all-in-one",
-				"ecmel.vscode-html-css",
-				"streetsidesoftware.code-spell-checker",
-				"ms-vscode.wordcount",
 				"eamodio.gitlens",
+				"ecmel.vscode-html-css",
 				"esbenp.prettier-vscode",
 				"foxundermoon.shell-format",
-				"dbaeumer.vscode-eslint",
-				"wingrunr21.vscode-ruby"
+				"ginfuru.ginfuru-vscode-jekyll-syntax",
+				"ginfuru.vscode-jekyll-snippets",
+				"ms-vscode.wordcount",
+				"streetsidesoftware.code-spell-checker",
+				"yzhang.markdown-all-in-one"
 			]
 		}
 	},
@@ -40,7 +35,7 @@
 		// Live reload server
 		35729
 	],
-	"postCreateCommand": "sh .devcontainer/post-create.sh",
-	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+	"onCreateCommand": ".devcontainer/post-create.sh"
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
 }

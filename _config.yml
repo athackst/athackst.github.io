@@ -63,3 +63,10 @@ links:
   - name: Women in Robotics
     url: https://womeninrobotics.org
     thumbnail: https://www.womeninrobotics.org/assets/images/logo/WiRLogo-200x200t.png
+
+exclude:
+ - .ruby-lsp/*
+ - node_modules/*
+ - vendor/*
+ - .sass-cache/*
+ - .cookies
