@@ -105,7 +105,7 @@ GEM
       sass-embedded (~> 1.75)
     jekyll-seo-tag (2.8.0)
       jekyll (>= 3.8, < 5.0)
-    jekyll-theme-profile (1.12.3)
+    jekyll-theme-profile (1.12.5)
       csv (~> 3.3.0)
       jekyll (> 3.5, < 5.0)
       jekyll-github-metadata (~> 2.9)
