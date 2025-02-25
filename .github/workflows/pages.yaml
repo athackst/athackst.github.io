@@ -46,6 +46,9 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    outputs:
+      base_url: ${{ steps.pages.outputs.base_url }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -82,14 +85,30 @@ jobs:
           mkdir _site
           tar --directory _site -xvf "artifact.tar"
           tree
+      - name: Generate ignore list from HTML files
+        run: |
+          HOSTNAME="${{ needs.build.outputs.base_url }}"
+          
+          # Find all .html files, remove the _site prefix, and prepend the hostname
+          IGNORE_LIST=$(find _site -name "*.html" | sed "s|^_site|$HOSTNAME|")
+
+          # Add additional ignored URLs manually
+          IGNORE_LIST+="
+          https://www.linkedin.com/in/allisonthackston
+          /twitter.com/"
+
+          # Save as a multi-line GitHub output
+          {
+            echo "ignore_list<<EOF"
+            echo "$IGNORE_LIST"
+            echo "EOF"
+          } >> $GITHUB_ENV
+
       - name: Test with htmlproofer
         uses: athackst/htmlproofer-action@main
         with:
           ignore_urls: |
-            https://www.linkedin.com/in/allisonthackston
-            /twitter.com/
-          swap_urls: |
-            ^https.?\/\/www.althack.dev:
+            ${{ env.ignore_list }}
 
   # Deployment job
   deploy:
