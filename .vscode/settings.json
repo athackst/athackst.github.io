@@ -12,21 +12,15 @@
         "Gemfile",
         "Gemfile.lock"
     ],
-    "rubyLsp.enabledFeatures": {
-        "documentHighlights": true,
-        "documentLink": true,
-        "documentSymbols": true,
-        "foldingRanges": true,
-        "selectionRanges": true,
-        "semanticHighlighting": true,
-        "formatting": true,
-        "diagnostics": true,
-        "codeActions": true,
-        "onTypeFormatting": true
+    "rubyLsp.rubyVersionManager": {
+        "identifier": "rvm"
     },
     "[plaintext]": {
         "editor.unicodeHighlight.ambiguousCharacters": false,
         "editor.unicodeHighlight.invisibleCharacters": false,
         "files.insertFinalNewline": false
-    }
+    },
+    "cSpell.words": [
+        "cooldown"
+    ]
 }
