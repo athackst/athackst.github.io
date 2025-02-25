@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         input.addEventListener("focus", function () {
             this.select();
         });
-        input.addEventListener("click", function() {
+        input.addEventListener("click", function () {
             this.setSelectionRange(0, this.value.length);
         });
     });
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     roundsInput.addEventListener("focus", function () {
         this.select();
     });
-    roundsInput.addEventListener("click", function() {
+    roundsInput.addEventListener("click", function () {
         this.setSelectionRange(0, this.value.length);
     });
 
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (currentPhase === 'work') {
             currentPhase = 'rest';
             startPhase(restTime);
-        } else if (currentPhase === 'rest' ){
+        } else if (currentPhase === 'rest') {
             currentRound++;
             if (currentRound > totalRounds) {
                 currentPhase = 'cooldown';
@@ -212,7 +212,19 @@ document.addEventListener("DOMContentLoaded", function () {
     function updatePhaseLabel() {
         const mins = Math.floor(timeLeft / 60);
         const secs = timeLeft % 60;
-        phaseLabel.innerText = `${currentPhase === 'work' ? 'Work' : 'Rest'} - Round ${currentRound}/${totalRounds} - ${mins}:${secs.toString().padStart(2, '0')}`;
+        let phaseTitles = {
+            warmup: "Warm Up",
+            work: "Work",
+            rest: "Rest",
+            cooldown: "Cooldown",
+            ready: "Ready"
+        }
+        let phaseText = phaseTitles[currentPhase];
+        if (currentPhase === 'work' || currentPhase === 'rest') {
+            phaseLabel.innerText = `${phaseText} - Round ${currentRound}/${totalRounds} - ${mins}:${secs.toString().padStart(2, '0')}`;
+        } else {
+            phaseLabel.innerText = `${phaseText} - ${mins}:${secs.toString().padStart(2, '0')}`;
+        }
     }
 
     /** Update background color based on phase */
@@ -242,7 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
             sound.currentTime = 0; // Reset sound to the beginning
             sound.play();
         }
-    }    
+    }
 
     console.log("Timer script loaded successfully!");
     calculateTotalTime();
