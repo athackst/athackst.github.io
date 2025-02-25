@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         input.addEventListener("focus", function () {
             this.select();
         });
-        input.addEventListener("click", function() {
+        input.addEventListener("click", function () {
             this.setSelectionRange(0, this.value.length);
         });
     });
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     roundsInput.addEventListener("focus", function () {
         this.select();
     });
-    roundsInput.addEventListener("click", function() {
+    roundsInput.addEventListener("click", function () {
         this.setSelectionRange(0, this.value.length);
     });
 
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (currentPhase === 'work') {
             currentPhase = 'rest';
             startPhase(restTime);
-        } else if (currentPhase === 'rest' ){
+        } else if (currentPhase === 'rest') {
             currentRound++;
             if (currentRound > totalRounds) {
                 currentPhase = 'cooldown';
@@ -212,7 +212,19 @@ document.addEventListener("DOMContentLoaded", function () {
     function updatePhaseLabel() {
         const mins = Math.floor(timeLeft / 60);
         const secs = timeLeft % 60;
-        phaseLabel.innerText = `${currentPhase === 'work' ? 'Work' : 'Rest'} - Round ${currentRound}/${totalRounds} - ${mins}:${secs.toString().padStart(2, '0')}`;
+        let phaseTitles = {
+            warmup: "Warm Up",
+            work: "Work",
+            rest: "Rest",
+            cooldown: "Cooldown",
+            ready: "Ready"
+        }
+        let phaseText = phaseTitles[currentPhase];
+        if (currentPhase === 'work' || currentPhase === 'rest') {
+            phaseLabel.innerText = `${phaseText} - Round ${currentRound}/${totalRounds} - ${mins}:${secs.toString().padStart(2, '0')}`;
+        } else {
+            phaseLabel.innerText = `${phaseText} - ${mins}:${secs.toString().padStart(2, '0')}`;
+        }
     }
 
     /** Update background color based on phase */
@@ -229,20 +241,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function playSound() {
         const enableSounds = document.getElementById('enableSounds').checked;
-        if (!enableSounds) return; // Exit if sounds are disabled
+        if (!enableSounds) return;
+    
         let sounds = {
-            warmup: "startSound",
-            work: "workSound",
-            rest: "restSound",
-            cooldown: "endSound",
-            ready: "finishSound"
-        }
-        const sound = document.getElementById(sounds[currentPhase]);
-        if (sound) {
-            sound.currentTime = 0; // Reset sound to the beginning
-            sound.play();
-        }
-    }    
+            warmup: "/assets/sounds/arcade-ui-7-229506.mp3",
+            work: "/assets/sounds/arcade-ui-2-229500.mp3",
+            rest: "/assets/sounds/arcade-ui-4-229502.mp3",
+            cooldown: "/assets/sounds/arcade-ui-9-229507.mp3",
+            ready: "/assets/sounds/arcade-ui-18-229517.mp3"
+        };
+    
+        let soundFile = sounds[currentPhase];
+        if (!soundFile) return;
+    
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        fetch(soundFile)
+            .then(response => response.arrayBuffer())
+            .then(arrayBuffer => audioContext.decodeAudioData(arrayBuffer))
+            .then(audioBuffer => {
+                const soundSource = audioContext.createBufferSource();
+                soundSource.buffer = audioBuffer;
+                soundSource.connect(audioContext.destination);
+                soundSource.start(0);
+            })
+            .catch(error => console.error("Audio playback error:", error));
+    }
 
     console.log("Timer script loaded successfully!");
     calculateTotalTime();
