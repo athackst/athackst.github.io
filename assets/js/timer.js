@@ -239,33 +239,53 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.style.backgroundColor = backgroundColors[currentPhase];
     }
 
-    function playSound() {
-        const enableSounds = document.getElementById('enableSounds').checked;
-        if (!enableSounds) return;
-    
-        let sounds = {
+    let audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    let audioBuffers = {};
+
+    function loadAudioFiles() {
+        const sounds = {
             warmup: "/assets/sounds/arcade-ui-7-229506.mp3",
             work: "/assets/sounds/arcade-ui-2-229500.mp3",
             rest: "/assets/sounds/arcade-ui-4-229502.mp3",
             cooldown: "/assets/sounds/arcade-ui-9-229507.mp3",
             ready: "/assets/sounds/arcade-ui-18-229517.mp3"
         };
-    
-        let soundFile = sounds[currentPhase];
-        if (!soundFile) return;
-    
-        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        fetch(soundFile)
-            .then(response => response.arrayBuffer())
-            .then(arrayBuffer => audioContext.decodeAudioData(arrayBuffer))
-            .then(audioBuffer => {
-                const soundSource = audioContext.createBufferSource();
-                soundSource.buffer = audioBuffer;
-                soundSource.connect(audioContext.destination);
-                soundSource.start(0);
-            })
-            .catch(error => console.error("Audio playback error:", error));
+
+        Object.keys(sounds).forEach(phase => {
+            fetch(sounds[phase])
+                .then(response => response.arrayBuffer())
+                .then(arrayBuffer => audioContext.decodeAudioData(arrayBuffer))
+                .then(audioBuffer => {
+                    audioBuffers[phase] = audioBuffer;
+                    console.log(`Loaded: ${phase}`);
+                })
+                .catch(error => console.error(`Error loading ${phase} sound:`, error));
+        });
     }
+
+    // Unlock audio context on first user interaction
+    document.addEventListener("click", function unlockAudio() {
+        if (audioContext.state === "suspended") {
+            audioContext.resume().then(() => console.log("Audio context resumed"));
+        }
+        document.removeEventListener("click", unlockAudio);
+    });
+
+    // Play sound from preloaded buffers
+    function playSound() {
+        const enableSounds = document.getElementById('enableSounds').checked;
+        if (!enableSounds) return;
+
+        if (!audioBuffers[currentPhase]) return;
+
+        const source = audioContext.createBufferSource();
+        source.buffer = audioBuffers[currentPhase];
+        source.connect(audioContext.destination);
+        source.start(0);
+    }
+
+    loadAudioFiles();
+
 
     console.log("Timer script loaded successfully!");
     calculateTotalTime();
