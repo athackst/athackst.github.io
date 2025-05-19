@@ -51,7 +51,7 @@ links:
     description: My GitHub Dashboard showing the status of all of my repos
 
   - name: NASA JSC
-    url: https://gitlab.com/nasa-jsc-robotics
+    url: https://www.nasa.gov/reference/jsc-robotics/
     thumbnail: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png
     description: NASA JSC Robonaut + Valkyrie open source libraries
 
