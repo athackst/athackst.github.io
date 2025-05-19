@@ -70,3 +70,6 @@ exclude:
  - vendor/*
  - .sass-cache/*
  - .cookies
+
+plugins:
+  - jekyll-redirect-from

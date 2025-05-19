@@ -8,6 +8,7 @@ gem 'jekyll-theme-profile'
 
 group :jekyll_plugins do
   gem 'jekyll-github-metadata', '<= 2.13.0'
+  gem 'jekyll-redirect-from'
 end
 
 group :development do
