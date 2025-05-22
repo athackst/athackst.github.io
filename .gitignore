@@ -52,5 +52,6 @@ Temporary Items
 repo-info.json
 
 node_modules/
-
-.sass-cache
+.sass-cache/
+.ruby-lsp/
+.jekyll-cache/
