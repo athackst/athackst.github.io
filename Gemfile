@@ -12,7 +12,7 @@ group :jekyll_plugins do
 end
 
 group :development do
-    gem 'dotenv', '~> 3.1'
+    gem 'dotenv', '~> 3.2'
     gem 'html-proofer'
     gem "webrick", "~> 1.9"
 end
