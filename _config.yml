@@ -52,7 +52,7 @@ links:
 
   - name: NASA JSC
     url: https://www.nasa.gov/reference/jsc-robotics/
-    thumbnail: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png
+    thumbnail: https://upload.wikimedia.org/wikipedia/commons/4/46/NASA_logo_%282023_colors%29.svg
     description: NASA JSC Robonaut + Valkyrie open source libraries
 
   - name: Task Behavior Tree
