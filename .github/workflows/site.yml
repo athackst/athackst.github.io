@@ -1,0 +1,45 @@
+# This file is generated from athackst/ci/template/.github/workflows/site.yml.jinja.
+# Do not edit directly; update the template instead.
+
+name: Site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.event_name == 'pull_request' && format('gh-pages-site-pr-{0}', github.event.pull_request.number) || 'gh-pages-site' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build-site:
+    permissions:
+      contents: read
+    uses: athackst/ci/.github/workflows/jekyll_site.yml@main
+
+  test-site:
+    needs: build-site
+    permissions:
+      contents: read
+    uses: athackst/ci/.github/workflows/htmlproofer_site.yml@main
+    with:
+      host: ${{ needs.build-site.outputs.host }}
+      base-path: ${{ needs.build-site.outputs.base-path }}
+      artifact-name: ${{ needs.build-site.outputs.artifact-name }}
+
+  deploy-site:
+    if: ${{ (github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'release' && github.event.action == 'published') }}
+    needs: build-site
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    uses: athackst/ci/.github/workflows/deploy_site.yml@main
+    with:
+      type: action
+      version: ${{ needs.build-site.outputs.version }}
+    secrets: inherit
