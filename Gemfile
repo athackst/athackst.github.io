@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'jekyll'
 gem 'bundler'
 
-gem 'jekyll-theme-profile'
+gem 'jekyll-theme-primerpages'
 # gem 'jekyll-theme-profile', :git => 'https://github.com/athackst/jekyll-theme-profile.git'
 
 group :jekyll_plugins do
