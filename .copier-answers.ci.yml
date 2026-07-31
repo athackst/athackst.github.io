@@ -3,4 +3,4 @@ _commit: v0.9.0-3-g25df9b2
 _src_path: gh:athackst/ci
 automerge_mode: native
 do_releases: false
-site_generator: jekyll
+site_generator: none
