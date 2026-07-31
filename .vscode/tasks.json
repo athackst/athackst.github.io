@@ -6,13 +6,13 @@
         {
             "label": "jekyll: serve",
             "type": "shell",
-            "command": "bundle exec jekyll serve --livereload",
+            "command": "bin/serve",
             "problemMatcher": []
         },
         {
             "label": "jekyll: serve (drafts)",
             "type": "shell",
-            "command": "bundle exec jekyll serve --drafts --livereload",
+            "command": "bin/serve --drafts",
             "problemMatcher": []
         },
         {

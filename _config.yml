@@ -65,6 +65,7 @@ links:
     thumbnail: https://www.womeninrobotics.org/assets/images/logo/WiRLogo-200x200t.png
 
 exclude:
+ - bin
  - .ruby-lsp/*
  - node_modules/*
  - vendor/*
