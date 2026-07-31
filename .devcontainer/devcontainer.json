@@ -23,12 +23,10 @@
 			]
 		}
 	},
-	// Uncomment the next line if you want to publish any ports.
-	"forwardPorts": [
-		// Jekyll server
-		4000,
-		// Live reload server
-		35729
+	// Publish Jekyll and LiveReload on the same ports on the host.
+	"appPort": [
+		"4008:4008",
+		"35737:35737"
 	],
 	"onCreateCommand": ".devcontainer/post-create.sh"
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+exec bundle exec jekyll serve \
+    --host 0.0.0.0 \
+    --livereload \
+    --livereload-port 35737 \
+    --port 4008 \
+    "$@"
