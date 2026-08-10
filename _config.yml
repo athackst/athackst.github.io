@@ -39,31 +39,6 @@ analytics:
   provider: google
   property: G-JG29YKVRKH
 
-links:
-  - name: Website
-    url: https://www.allisonthackston.com
-    thumbnail: https://www.allisonthackston.com/assets/img/profile.jpg
-    description: My personal website + blog
-
-  - name: Dashboard
-    url: https://dashboard.althack.dev
-    thumbnail: https://dashboard.althack.dev/assets/dashboard.png
-    description: My GitHub Dashboard showing the status of all of my repos
-
-  - name: NASA JSC
-    url: https://www.nasa.gov/reference/jsc-robotics/
-    thumbnail: https://upload.wikimedia.org/wikipedia/commons/4/46/NASA_logo_%282023_colors%29.svg
-    description: NASA JSC Robonaut + Valkyrie open source libraries
-
-  - name: Task Behavior Tree
-    url: https://github.com/ToyotaResearchInstitute/task_behavior_engine
-    thumbnail: https://upload.wikimedia.org/wikipedia/commons/1/15/Robot_Operating_System_logo.svg
-    description: Behavior tree engine for ROS1
-
-  - name: Women in Robotics
-    url: https://womeninrobotics.org
-    thumbnail: https://www.womeninrobotics.org/assets/images/logo/WiRLogo-200x200t.png
-
 exclude:
  - bin
  - .ruby-lsp/*
